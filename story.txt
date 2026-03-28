@@ -1,0 +1,213 @@
+Project KHE script
+
+I will never forget the image of that girl. The one who perhaps made my cold heart tremble once again.
+
+But it seems that the poetic scenes I dreamed of will never become reality.
+
+All I can do is stand and watch her from afar, unable to do anything.
+
+“It’s not possible.”
+“We don’t even know each other—how could you talk to her?”
+
+Those voices kept echoing in my mind. I truly didn’t know what to do anymore.
+
+Today is like every other day. The same familiar cafeteria, the same familiar seat. She’s sitting there again. And me, as always, just watching from afar.
+
+My final year here before transferring somewhere completely different.
+
+AAAAA! This could be that “moment”—when the male and female leads accidentally meet. Too bad I’m just a side character.
+
+Damn it. Should I approach her?
+
+[If choose yes
+→ Good ending route = true]
+
+Gathering all my courage, I stood up and walked toward her.
+
+I’ve endured the feeling of just watching without doing anything long enough. Now, get rid of this embarrassment.
+
+As I got closer, my heartbeat felt like it tripled. Nervousness and a flood of not-so-good memories from past conversations with girls came crashing in like a tsunami.
+
+Whatever, it’s all or nothing, I told myself.
+
+“Anou… excuse me.” I forced the words out.
+
+She looked up at me. Oh! It felt like I could just… die and ascend right there.
+
+Or at least that’s what I thought. Maybe it’s a bit weird to bother her while she’s eating?
+
+In a very gentle, slightly bothered tone, she replied:
+“Who are you? I don’t think we know each other?”
+
+Damn. Let’s push a bit further.
+
+“Well, I’ve seen you around a few times. I think you’re cute. Can I ask—are you Japanese?”
+
+“Yeah, I am. But why are you asking?”
+
+“I’m learning Japanese too, but I don’t have anyone to practice with. So it would be great if you could help me a bit. I know it sounds suspicious for a stranger to come up and ask this.”
+
+“Ah, if you don’t want to, I won’t bother you anymore. Sorry.”
+
+I turned back to my usual table.
+
+But before I could sit down, she said:
+“Well, in that case, it’s fine. It’s not that disgusting that a foreigner is interested in my language. I’ll help you. Do you use any social media? IG? Line?”
+
+“Oh, I have Line, just never really used it. No one uses Line in the U.S. anyway. I also have IG. Let’s go with IG.”
+
+“Ok ok.”
+
+“Ahh… I think I forgot to download IG on my phone. Give me a second.”
+
+“Alright, here’s my IG.”
+
+“Okay. Did you get the notification?”
+
+“Yeah! Thank you so much.”
+
+“Ahaha, no problem.”
+
+“I’ll let you finish your lunch. I have to head to class. See you later.”
+
+That entire afternoon, my mind felt like it was exploding. I did it. Amazing.
+
+[If choose no
+Good ending route → false
+If! Good => Bad ending → True]
+
+I decided not to approach her.
+
+And just like that, I kept watching from afar. March, April, then May passed.
+
+The end of my second year approached.
+
+I transferred to a new university, carrying an indescribable sadness.
+
+Maybe I was just too cowardly. I kept blaming myself.
+
+What a regret.
+
+—Bad End—
+
+Good ending path (just friends):
+[Note: Female lead is named Aoi. The main character is Brandon Dang, a Vietnamese international student.]
+
+Since that conversation, my days have been replaced with happier, more lively ones.
+
+At the same time, I could comfortably start conversations with her without fearing being seen as disgusting like before.
+
+Whenever I walked to the cafeteria, I always hoped she would be sitting near the usual window spot. Then we would talk about things we experienced during the day.
+
+At first, the topics were a bit dry. But gradually, more interesting things came up.
+
+Thinking about it, it’s actually pretty interesting that I became friends with a Japanese person.
+
+I always thought someone like me—a Vietnamese—would have a hard time getting close to a Japanese person, especially a girl.
+
+Maybe I just tend to overthink things.
+
+Then one day in mid-April—
+
+Aoi suddenly asked me:
+“Brandon, what are you planning to do next year?”
+
+Her question caught me off guard. Because I might be transferring next year.
+
+The atmosphere became slightly awkward.
+
+Should I tell her?
+
+[If choose not to tell and lie
+Telling-lies = true → friend-ending = true]
+
+“Well, I’m planning to look for internship opportunities. Since third year is when you should start early.”
+
+“Oh, I see.”
+
+“What about you?”
+“I’m not sure yet. Next year will be my second year, so probably the same as this year.”
+
+“Are you planning to return to Japan after graduation?”
+“Not sure.”
+
+“Ok ok.”
+
+Final exams came, and I left without Aoi ever knowing.
+
+Messages after main leaves:
+
+Aoi: Where are you? I haven’t seen you at all. The new school year is about to start. (worried emoji)
+
+Main: Aoi… you won’t be mad at me for what I’m about to say, right?
+
+Aoi: Hmm? Go ahead, I won’t be mad.
+
+Main: Actually… I transferred schools. Sorry for not telling you.
+
+Aoi paused a bit before replying.
+
+Aoi: Ah haha… it’s okay. We can still stay in touch. Just not in person…
+
+Main: You’re really not sad?
+
+Aoi: Nope, not at all.
+
+Main: Then that’s good. I was just afraid of making you sad. I’m really sorry. (sad apology emoji)
+
+But in reality, Aoi was very sad that he wasn’t honest with her.
+
+Even though they stayed in contact, their closeness could never grow further due to the distance.
+
+In the end, he did gain a Japanese friend. But it felt bittersweet because he wasn’t honest.
+
+—Good End—
+
+[If choose to tell the truth
+Telling-lies = false → friend-ending = false]
+
+“Aoi, there’s something I want to tell you. I just don’t know if it’ll make you sad.”
+
+“Hmm? Go ahead. It should be fine.”
+
+I felt nervous but continued anyway. I thought being honest would be better.
+
+“Unfortunately, I won’t be here next year. I’ll be transferring to a university in another state.”
+
+“Wait, why transfer? I think this school isn’t that bad.”
+
+Aoi looked slightly sad as she spoke.
+
+“But I have to transfer. There’s no other choice.”
+
+“That’s a shame… It would’ve been nice if you stayed and we could keep meeting like this…”
+
+“But… let’s just enjoy the time we have left while you’re still here, okay?”
+
+“Yeah.”
+
+After that conversation, although Aoi felt a bit sad whenever it came up, the two of us actually grew closer.
+
+Eventually, the inevitable came. Final exams passed. The second year ended. And I had to leave.
+
+On the day of departure:
+
+Aoi: So today’s the day you leave.
+
+Main: Yeah.
+
+Aoi: It’s a shame I can’t say goodbye in person. I’m in Japan right now. (sad emoji)
+
+Main: Ahaha, it’s okay. But I’ll miss you. I’ll definitely tell you about my new school when I get there.
+
+Aoi: Yeah! Don’t forget to message me. If you forget, I’ll be really sad.
+
+Main: Then see you later.
+
+Aoi: Yeah. Bye bye.
+
+The main character moved to a new university. Even though the distance between them grew, they continued to stay in touch.
+
+Aoi and the main character became closer over time. Who knows—maybe a bright future awaits them.
+
+—True End—
