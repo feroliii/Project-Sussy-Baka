@@ -3,17 +3,17 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define a = Character("Aoi", callback=girl_speak)
-define m = Character("Me", callback=man_speak)
-define g = Character("Girl", callback=girl_speak)
+define a = Character("Aoi")
+define m = Character("Me")
+define g = Character("Girl")
 
-define a_jp = Character("Aoi", what_font="NotoSansJP.ttf", callback=girl_speak)
-define m_jp = Character("Me", what_font="NotoSansJP.ttf", callback=man_speak)
-define g_jp = Character("Girl", what_font="NotoSansJP.ttf", callback=girl_speak)
+define a_jp = Character("Aoi", what_font="NotoSansJP.ttf")
+define m_jp = Character("Me", what_font="NotoSansJP.ttf")
+define g_jp = Character("Girl", what_font="NotoSansJP.ttf")
 
-define na_jp = Character("", what_font="NotoSansJP.ttf", callback=man_speak)
-define na_jp_sec = Character("", what_font="NotoSansJP.ttf", callback=man_speak)
-define na_jp_third = Character("", what_font="NotoSansJP.ttf", callback=man_speak)
+define na_jp = Character("", what_font="NotoSansJP.ttf")
+define na_jp_sec = Character("", what_font="NotoSansJP.ttf")
+define na_jp_third = Character("", what_font="NotoSansJP.ttf")
 
 define cafe = Image('cafe.png')
 define airport = Image('airport.jpg')
@@ -25,7 +25,7 @@ define sakura = Image('sakura.jpg')
 define audio.lecarrousel = "assets/ost/Le-Carrousel.ogg"
 define audio.newhome = "assets/ost/New-Home.ogg"
 define audio.wind = "assets/ost/Wind.ogg"
-define audio.lol = "assets/ost/legend-nver-die.ogg"
+define audio.lol = "assets/ost/league-samba.ogg"
 define audio.driftaway = "assets/ost/Drifting-away.ogg"
 define audio.ballerina = "assets/ost/Ballerina.ogg"
 define audio.bleached = "assets/ost/Bleached.ogg"
@@ -2423,29 +2423,29 @@ label start:
 
         scene sky
 
-            $ preferences.text_cps = 30
+        $ preferences.text_cps = 30
 
-            m "Đẩy wave lính đi Ezreal, dễ ẹc à sao mày ngo thế con!"
+        m "Đẩy wave lính đi Ezreal, dễ ẹc à sao mày ngo thế con!"
 
-            "30 phút sau..."
+        "30 phút sau..."
 
-            m "LẤY BARON!! SMITE SMITE!!"
+        m "LẤY BARON!! SMITE SMITE!!"
 
-            "5 trận sau..."
+        "5 trận sau..."
 
-            m "Chết tiệt... giờ thành sắt đoàn mẹ rồi..."
+        m "Chết tiệt... giờ thành sắt đoàn mẹ rồi..."
 
-            m "..."
+        m "..."
 
-            m "Chuyện gì vừa xảy ra vậy?"
-            
-            m "..."
+        m "Chuyện gì vừa xảy ra vậy?"
+        
+        m "..."
 
-            m "Bruh tính ra chơi Liên Minh vẫn vui chán."
+        m "Bruh tính ra chơi Liên Minh vẫn vui chán."
 
-            m "Vui hơn hẳn là nói chuyện với cô ta, hẹ hẹ hẹ."
+        m "Vui hơn hẳn là nói chuyện với cô ta, hẹ hẹ hẹ."
 
-            return
+        return
 
     label good_end_vi:
 
@@ -2453,119 +2453,119 @@ label start:
 
         play music wind volume 0.7
 
-            $ preferences.text_cps = 30
-            "Tập hết can đảm, tôi đứng dậy và tiến về phía cô ấy."
+        $ preferences.text_cps = 30
+        "Tập hết can đảm, tôi đứng dậy và tiến về phía cô ấy."
 
-            "Tôi đã chịu đựng cảm giác chỉ nhìn mà không làm gì quá lâu rồi. Giờ thì xóa bỏ sự xấu hổ này."
+        "Tôi đã chịu đựng cảm giác chỉ nhìn mà không làm gì quá lâu rồi. Giờ thì xóa bỏ sự xấu hổ này."
 
-            "Khi tiến gần, tim tôi đập như gấp ba lần. Sự lo lắng và những kỷ niệm không mấy tốt đẹp từ các cuộc trò chuyện trước đây ùa về như sóng thần."
+        "Khi tiến gần, tim tôi đập như gấp ba lần. Sự lo lắng và những kỷ niệm không mấy tốt đẹp từ các cuộc trò chuyện trước đây ùa về như sóng thần."
 
-            "Thôi được, tất cả hoặc không gì cả, tôi tự nhủ."
+        "Thôi được, tất cả hoặc không gì cả, tôi tự nhủ."
 
-            m "Chào... xin lỗi."
+        m "Chào... xin lỗi."
 
-            "Tôi gắng gượng nói ra câu đó."
+        "Tôi gắng gượng nói ra câu đó."
 
-            "Cô ấy ngẩng lên nhìn tôi. Ôi! Cảm giác như tôi có thể chết và lên thiên đường ngay tại chỗ."
+        "Cô ấy ngẩng lên nhìn tôi. Ôi! Cảm giác như tôi có thể chết và lên thiên đường ngay tại chỗ."
 
-            "Ít nhất đó là cảm giác của tôi. Có lẽ hơi lạ khi làm phiền cô ấy khi cô ấy đang ăn?"
+        "Ít nhất đó là cảm giác của tôi. Có lẽ hơi lạ khi làm phiền cô ấy khi cô ấy đang ăn?"
 
-            "Với giọng nhẹ nhàng, hơi khó chịu, cô ấy trả lời:"
+        "Với giọng nhẹ nhàng, hơi khó chịu, cô ấy trả lời:"
 
-            g "Bạn là ai? Mình nghĩ chúng ta chưa quen biết gì nhau hết á?"
+        g "Bạn là ai? Mình nghĩ chúng ta chưa quen biết gì nhau hết á?"
 
-            "Chết tiệt..."
-            "Tiếp tục một chút."
+        "Chết tiệt..."
+        "Tiếp tục một chút."
 
-            m "À, tôi đã thấy bạn vài lần. Tôi nghĩ bạn dễ thương! Vậy nên..."
+        m "À, tôi đã thấy bạn vài lần. Tôi nghĩ bạn dễ thương! Vậy nên..."
 
-            "Chết tiệt..." 
-            "Tôi nên hỏi gì đây? Tôi cần giữ cuộc trò chuyện sống động..."
+        "Chết tiệt..." 
+        "Tôi nên hỏi gì đây? Tôi cần giữ cuộc trò chuyện sống động..."
 
-            m "Bạn là người Mỹ phải không?"
+        m "Bạn là người Mỹ phải không?"
 
-            g "Không, thực ra tôi là sinh viên quốc tế."
+        g "Không, thực ra tôi là sinh viên quốc tế."
 
-            m "Ồ!"
+        m "Ồ!"
 
-            m "Tôi cũng vậy!"
+        m "Tôi cũng vậy!"
 
-            g "Thật sao??"
+        g "Thật sao??"
 
-            m "Ni hao fine shyt"
+        m "Ni hao fine shyt"
 
-            g "..."
+        g "..."
 
-            "Bỏ mẹ. Đùa ngo quá. Chết con rồi. AAAAAA."
+        "Bỏ mẹ. Đùa ngo quá. Chết con rồi. AAAAAA."
 
-            m "Haha..." 
+        m "Haha..." 
 
-            m "Xin lỗi nha, mình nhạt vl..."
+        m "Xin lỗi nha, mình nhạt vl..."
 
-            m "Nhân tiện mình là người Việt"
+        m "Nhân tiện mình là người Việt"
 
-            g "Tôi là người Nhật"
+        g "Tôi là người Nhật"
 
-            m "Không thể tin được!!! Nhưng tôi đang học tiếng Nhật á."
+        m "Không thể tin được!!! Nhưng tôi đang học tiếng Nhật á."
 
-            g "Hay quá! Và tiến triển thế nào rồi?"
+        g "Hay quá! Và tiến triển thế nào rồi?"
 
-            m "Thành thật mà nói, cũng khá tốt nhưng tôi không có ai để luyện cùng."
+        m "Thành thật mà nói, cũng khá tốt nhưng tôi không có ai để luyện cùng."
 
-            m "Này! Bạn có thể giúp tôi không?"
-            
-            g "Hmm... tôi đang ăn, nên... không phải lúc tốt đâu."
+        m "Này! Bạn có thể giúp tôi không?"
+        
+        g "Hmm... tôi đang ăn, nên... không phải lúc tốt đâu."
 
-            m "Ồ... tôi không muốn làm phiền bạn... Xin lỗi."
+        m "Ồ... tôi không muốn làm phiền bạn... Xin lỗi."
 
-            m "Chà... thật vui khi gặp bạn."
+        m "Chà... thật vui khi gặp bạn."
 
-            "Tôi quay về bàn quen thuộc của mình."
+        "Tôi quay về bàn quen thuộc của mình."
 
-            "Nhưng trước khi tôi kịp ngồi xuống, cô ấy nói:"
+        "Nhưng trước khi tôi kịp ngồi xuống, cô ấy nói:"
 
-            g "Đợi!! Không đến mức ghê tởm khi một người nước ngoài quan tâm đến ngôn ngữ của tôi đâu. Tôi sẽ giúp bạn. Bạn có dùng mạng xã hội không? IG? Line?"
+        g "Đợi!! Không đến mức ghê tởm khi một người nước ngoài quan tâm đến ngôn ngữ của tôi đâu. Tôi sẽ giúp bạn. Bạn có dùng mạng xã hội không? IG? Line?"
 
-            m "Ồ, tôi có Line nhưng chưa dùng bao giờ. Ở Mỹ cũng ít người dùng Line. Tôi cũng có IG. Vậy dùng IG nhé."
+        m "Ồ, tôi có Line nhưng chưa dùng bao giờ. Ở Mỹ cũng ít người dùng Line. Tôi cũng có IG. Vậy dùng IG nhé."
 
-            g "Ok ok."
+        g "Ok ok."
 
-            m "Ahh... chết tiệt..."
+        m "Ahh... chết tiệt..."
 
-            g "Gì vậy?"
+        g "Gì vậy?"
 
-            m "Điện thoại tôi vừa hết pin..."
+        m "Điện thoại tôi vừa hết pin..."
 
-            g "Hahaha không sao đâu!"
+        g "Hahaha không sao đâu!"
 
-            g "Đưa tôi tìm tên người dùng của bạn và follow nhé."
+        g "Đưa tôi tìm tên người dùng của bạn và follow nhé."
 
-            "Cô ấy đưa tôi iPhone và nhanh chóng gõ IG của tôi."
+        "Cô ấy đưa tôi iPhone và nhanh chóng gõ IG của tôi."
 
-            m "Được rồi, đây là IG của tôi."
+        m "Được rồi, đây là IG của tôi."
 
-            g "Ok. Đã gửi yêu cầu follow chưa?"
+        g "Ok. Đã gửi yêu cầu follow chưa?"
 
-            m "Rồi! Cảm ơn bạn rất nhiều. Tôi sẽ sạc điện thoại ngay lập tức."
+        m "Rồi! Cảm ơn bạn rất nhiều. Tôi sẽ sạc điện thoại ngay lập tức."
 
-            g "Haha, không sao đâu."
+        g "Haha, không sao đâu."
 
-            m "Tôi sẽ để bạn ăn tiếp. Tôi phải đi học. Hẹn gặp lại nhé."
+        m "Tôi sẽ để bạn ăn tiếp. Tôi phải đi học. Hẹn gặp lại nhé."
 
-            g "Ừ! Hẹn gặp lại!"
+        g "Ừ! Hẹn gặp lại!"
 
-            m "Ồ, tôi quên nói tên mình là Brandon!"
+        m "Ồ, tôi quên nói tên mình là Brandon!"
 
-            g "Haha, tôi tên là Aoi!"
+        g "Haha, tôi tên là Aoi!"
 
-            m "Rất vui được gặp bạn Aoi!"
+        m "Rất vui được gặp bạn Aoi!"
 
-            a "Rất vui được gặp bạn nữa!"
+        a "Rất vui được gặp bạn nữa!"
 
-            "Suốt cả buổi chiều, tâm trí tôi như nổ tung. Tôi đã làm được. Tuyệt vời."
-            "Chân tôi run rẩy."
+        "Suốt cả buổi chiều, tâm trí tôi như nổ tung. Tôi đã làm được. Tuyệt vời."
+        "Chân tôi run rẩy."
 
-            jump after_cof_vi
+        jump after_cof_vi
 
     label bad_end_vi:
 
@@ -2575,22 +2575,22 @@ label start:
 
         scene sky
 
-            $ preferences.text_cps = 30
-            
-            m "Ừ, tôi đang nghĩ gì vậy?"
-            m "Tôi chưa từng tiếp cận cô ấy và hôm nay cũng vậy..."
+        $ preferences.text_cps = 30
+        
+        m "Ừ, tôi đang nghĩ gì vậy?"
+        m "Tôi chưa từng tiếp cận cô ấy và hôm nay cũng vậy..."
 
-            "Và cứ như thế, tôi chỉ nhìn từ xa. Tháng Ba, tháng Tư, rồi tháng Năm trôi qua."
+        "Và cứ như thế, tôi chỉ nhìn từ xa. Tháng Ba, tháng Tư, rồi tháng Năm trôi qua."
 
-            "Cuối năm thứ hai cũng đến."
+        "Cuối năm thứ hai cũng đến."
 
-            "Tôi chuyển đến trường mới, mang theo nỗi buồn không thể diễn tả."
+        "Tôi chuyển đến trường mới, mang theo nỗi buồn không thể diễn tả."
 
-            "Có lẽ tôi quá nhút nhát. Tôi cứ tự trách bản thân."
+        "Có lẽ tôi quá nhút nhát. Tôi cứ tự trách bản thân."
 
-            "Thật hối tiếc."
+        "Thật hối tiếc."
 
-            return
+        return
 
     label after_cof_vi:
 
