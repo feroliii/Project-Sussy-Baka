@@ -16,6 +16,10 @@ define na_jp_sec = Character("", what_font="NotoSansJP.ttf")
 define na_jp_third = Character("", what_font="NotoSansJP.ttf")
 
 image m normal   = "assets/character_sprite/main-normal.png"
+image m sad   = "assets/character_sprite/main-sad.png"
+image m happy   = "assets/character_sprite/main-happy.png"
+
+
 
 define cafe = Image('cafe.png')
 define airport = Image('airport.jpg')
@@ -78,16 +82,18 @@ label start:
 
         scene cafe
 
-        show m normal at center
+        show m normal at left
+        
+
 
         "I will never forget the image of that girl. The one who perhaps made my cold heart tremble once again."
-
+        hide m normal
         "But it seems that the poetic scenes I dreamed of will never become reality."
-
+        show m happy at left
         "All I can do is stand and watch her from afar, unable to do anything."
-
+        hide m happy
         "“It's not possible.” “We don't even know each other—how could you talk to her?”"
-
+        show m sad at left
         "Those voices kept echoing in my mind. I truly didn't know what to do anymore."
 
         "Today is like every other day. The same familiar cafeteria, the same familiar seat. She's sitting there again. And me, as always, just watching from afar."
@@ -462,6 +468,8 @@ label start:
 
 
     label inicio_pt:
+
+        show m normal at left
 
         stop music fadeout 1.0
 
@@ -856,6 +864,7 @@ label start:
 
     label start_es:
 
+        show m normal at left
         
         stop music fadeout 1.0
 
@@ -1238,6 +1247,8 @@ label start:
 
     label start_ita:
 
+        show m normal at left
+
         stop music fadeout 1.0
 
         play music newhome volume 0.6
@@ -1615,6 +1626,8 @@ label start:
 
     label start_fr:
             
+        show m normal at left
+
         stop music fadeout 1.0
 
         play music newhome volume 0.6
@@ -1994,6 +2007,8 @@ label start:
 
 
     label start_german:
+
+        show m normal at left
 
         stop music fadeout 1.0
 
@@ -2376,6 +2391,8 @@ label start:
         return
 
     label start_vi:
+
+        show m normal at left
 
         stop music fadeout 1.0
 
@@ -2764,6 +2781,8 @@ label start:
 
 
     label start_jp:
+
+        show m normal at left
 
         stop music fadeout 1.0
 
