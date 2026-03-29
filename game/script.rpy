@@ -36,10 +36,11 @@ label start:
         "Deutsch":
             jump start_german
 
-        "Hànyu":
-            jump start_man
-        
-        "Nihongo":
+        "Tiếng Việt":
+            jump start_vi
+
+        "Only squares":
+            $ gui.text_font = gui.text_font_jp
             jump start_jp
         
 
@@ -2136,349 +2137,350 @@ label start:
 
         return
 
-    label start_man:
-
+    label start_vi:
         scene cafe
 
-        "我永远不会忘记那个女孩的身影。也许正是她，让我那颗冷漠的心再次颤动。"
+        "Tôi sẽ không bao giờ quên hình ảnh của cô gái đó. Người mà có lẽ đã khiến trái tim lạnh lùng của tôi rung động một lần nữa."
 
-        "但看来我梦里的诗意场景永远不会变为现实。"
+        "Nhưng có vẻ như những cảnh thơ mộng mà tôi mơ sẽ không bao giờ trở thành hiện thực."
 
-        "我所能做的，只是站在远处看着她，无能为力。"
+        "Tất cả những gì tôi có thể làm là đứng nhìn cô ấy từ xa, không thể làm gì cả."
 
-        "“不可能。” “我们甚至不认识——你怎么可能跟她说话？”"
+        "“Không thể được.” “Chúng ta còn chưa biết nhau—làm sao mà cậu dám nói chuyện với cô ấy?”"
 
-        "这些声音在我脑海里回响。我真的不知道该怎么办了。"
+        "Những tiếng nói đó cứ vang lên trong đầu tôi. Tôi thực sự không biết phải làm gì nữa."
 
-        "今天像往常一样。熟悉的自助餐厅，熟悉的座位。她又坐在那里。而我，像往常一样，只能远远地看着。"
+        "Hôm nay cũng giống như mọi ngày khác. Căn tin quen thuộc, chỗ ngồi quen thuộc. Cô ấy lại ngồi đó. Và tôi, như mọi khi, chỉ nhìn từ xa."
 
-        "这是我在转学前的最后一年。"
+        "Năm cuối cùng của tôi trước khi chuyển đến một nơi hoàn toàn khác."
 
-        "啊啊啊！这可能就是那个“瞬间”——男孩和女孩意外相遇的瞬间。可惜我只是一个配角。"
+        "AAAAA! Đây có thể là “khoảnh khắc”—khi nam chính và nữ chính vô tình gặp nhau. Tiếc là tôi chỉ là nhân vật phụ."
 
-        "该死。我应该上前吗？"
+        "Chết tiệt. Tôi có nên tiến đến gần cô ấy không?"
+
         $ preferences.text_cps = 0
-        menu:
-            "该死。我应该上前吗？" 
 
-            "当然，笨蛋！":
+        menu:
+            "Chết tiệt. Tôi có nên tiến đến gần cô ấy không?" 
+
+            "Tất nhiên rồi, đồ ngốc!":
                 menu:
-                    "你确定吗？你以前从没跟女孩搭讪过。"
+                    "Cậu chắc chứ? Chưa bao giờ cậu tiếp cận một cô gái trước đây mà."
 
-                    "是的！我确定！":
-                        jump good_end_man
+                    "Vâng! Tôi chắc chắn!":
+                        jump good_end_vi
 
-                    "真的？那我们回家玩英雄联盟吧（我青铜）。":
-                        jump league_end_man
+                    "Thật à, về nhà chơi Liên Minh đi (tôi bét đồng).":
+                        jump league_end_vi
 
-            "不行，看我！我又秃又臭 :/":
-                jump bad_end
+            "Không đâu, nhìn tôi kìa! Tôi hói và hôi hám :/":
+                jump bad_end_vi
 
-    label league_end_man:
+    label league_end_vi:
+            $ preferences.text_cps = 30
+
+            m "Đẩy sóng đi Ezreal, dễ ẹc!"
+
+            "30 phút sau..."
+
+            m "LẤY BARON!! SMITE SMITE!!"
+
+            "5 trận sau..."
+
+            m "Chết tiệt... Tôi giờ iron rồi..."
+
+            m "..."
+
+            m "Chuyện gì vừa xảy ra vậy?"
+            
+            m "..."
+
+            m "Vui hơn hẳn là nói chuyện với cô gái 🔥🔥🔥"
+
+            return
+
+    label good_end_vi:
+            $ preferences.text_cps = 30
+            "Tập hết can đảm, tôi đứng dậy và tiến về phía cô ấy."
+
+            "Tôi đã chịu đựng cảm giác chỉ nhìn mà không làm gì quá lâu rồi. Giờ thì xóa bỏ sự xấu hổ này."
+
+            "Khi tiến gần, tim tôi đập như gấp ba lần. Sự lo lắng và những kỷ niệm không mấy tốt đẹp từ các cuộc trò chuyện trước đây ùa về như sóng thần."
+
+            "Thôi được, tất cả hoặc không gì cả, tôi tự nhủ."
+
+            m "Chào... xin lỗi."
+
+            "Tôi gắng gượng nói ra câu đó."
+
+            "Cô ấy ngẩng lên nhìn tôi. Ôi! Cảm giác như tôi có thể chết và lên thiên đường ngay tại chỗ."
+
+            "Ít nhất đó là cảm giác của tôi. Có lẽ hơi lạ khi làm phiền cô ấy khi cô ấy đang ăn?"
+
+            "Với giọng nhẹ nhàng, hơi khó chịu, cô ấy trả lời:"
+
+            g "Bạn là ai? Tôi nghĩ chúng ta chưa quen nhau?"
+
+            "Chết tiệt..."
+            "Tiếp tục một chút."
+
+            m "À, tôi đã thấy bạn vài lần. Tôi nghĩ bạn dễ thương! Vậy nên..."
+
+            "Chết tiệt..." 
+            "Tôi nên hỏi gì đây? Tôi cần giữ cuộc trò chuyện sống động..."
+
+            m "Bạn là người Mỹ phải không?"
+
+            g "Không, thực ra tôi là sinh viên quốc tế."
+
+            m "Ồ!"
+
+            m "Tôi cũng vậy! Tôi là người châu Á. Còn bạn?"
+
+            g "Thật sao?? Tôi cũng là người châu Á!"
+
+            m "Ni hao fine shyt"
+
+            g "..."
+
+            m "Haha..." 
+
+            m "Xin lỗi, trò đùa tệ quá..."
+
+            m "Nhân tiện tôi đến từ Việt Nam"
+
+            g "Tôi là người Nhật"
+
+            m "Không thể tin được!!! Nhưng tôi đang học tiếng Nhật."
+
+            g "Hay quá! Và tiến triển thế nào rồi?"
+
+            m "Thành thật mà nói, cũng khá tốt nhưng tôi không có ai để luyện cùng."
+
+            m "Này! Bạn có thể giúp tôi không? Luyện tiếng Nhật cùng nhau."
+            
+            g "Hmm... tôi đang ăn, nên... không phải lúc tốt đâu."
+
+            m "Ồ... tôi không muốn làm phiền bạn... Xin lỗi."
+
+            m "Chà... thật vui khi gặp bạn."
+
+            "Tôi quay về bàn quen thuộc của mình."
+
+            "Nhưng trước khi tôi kịp ngồi xuống, cô ấy nói:"
+
+            g "Đợi!! Không đến mức ghê tởm khi một người nước ngoài quan tâm đến ngôn ngữ của tôi đâu. Tôi sẽ giúp bạn. Bạn có dùng mạng xã hội không? IG? Line?"
+
+            m "Ồ, tôi có Line nhưng chưa dùng bao giờ. Ở Mỹ cũng ít người dùng Line. Tôi cũng có IG. Vậy dùng IG nhé."
+
+            g "Ok ok."
+
+            m "Ahh... chết tiệt..."
+
+            g "Gì vậy?"
+
+            m "Điện thoại tôi vừa hết pin..."
+
+            g "Hahaha không sao đâu!"
+
+            g "Đưa tôi tìm tên người dùng của bạn và follow nhé."
+
+            "Cô ấy đưa tôi iPhone và nhanh chóng gõ IG của tôi."
+
+            m "Được rồi, đây là IG của tôi."
+
+            g "Ok. Đã gửi yêu cầu follow chưa?"
+
+            m "Rồi! Cảm ơn bạn rất nhiều. Tôi sẽ sạc điện thoại ngay lập tức."
+
+            g "Haha, không sao đâu."
+
+            m "Tôi sẽ để bạn ăn tiếp. Tôi phải đi học. Hẹn gặp lại nhé."
+
+            g "Ừ! Hẹn gặp lại!"
+
+            m "Ồ, tôi quên nói tên mình là Brandon!"
+
+            g "Haha, tôi tên là Aoi!"
+
+            m "Rất vui được gặp bạn Aoi!"
+
+            a "Rất vui được gặp bạn nữa!"
+
+            "Suốt cả buổi chiều, tâm trí tôi như nổ tung. Tôi đã làm được. Tuyệt vời."
+            "Chân tôi run rẩy."
+
+            jump after_cof_vi
+
+    label bad_end_vi:
+            $ preferences.text_cps = 30
+            
+            m "Ừ, tôi đang nghĩ gì vậy?"
+            m "Tôi chưa từng tiếp cận cô ấy và hôm nay cũng vậy..."
+
+            "Và cứ như thế, tôi chỉ nhìn từ xa. Tháng Ba, tháng Tư, rồi tháng Năm trôi qua."
+
+            "Cuối năm thứ hai cũng đến."
+
+            "Tôi chuyển đến trường mới, mang theo nỗi buồn không thể diễn tả."
+
+            "Có lẽ tôi quá nhút nhát. Tôi cứ tự trách bản thân."
+
+            "Thật hối tiếc."
+
+            return
+
+    label after_cof_vi:
+
+    scene campus
+    "Kể từ cuộc trò chuyện đó, những ngày của tôi trở nên hạnh phúc và sống động hơn."
+
+    "Đồng thời, tôi có thể bắt đầu trò chuyện với cô ấy mà không sợ bị coi là khó chịu như trước."
+
+    "Mỗi khi tôi đi đến căn tin, tôi luôn hy vọng cô ấy sẽ ngồi gần cửa sổ quen thuộc." 
+    
+    "Rồi chúng tôi trò chuyện về những điều xảy ra trong ngày."
+
+    "Lúc đầu, chủ đề hơi khô khan. Nhưng dần dần, những chuyện thú vị hơn xuất hiện."
+
+    "Nhìn lại..." 
+    
+    "Thật thú vị khi tôi đã trở thành bạn với một người Nhật."
+
+    "Tôi luôn nghĩ người như tôi — một người Việt — sẽ khó gần gũi với một người Nhật, đặc biệt là con gái."
+
+    "Có lẽ tôi chỉ hay suy nghĩ quá nhiều."
+
+    "Rồi một ngày giữa tháng Tư —"
+
+    "Aoi bất ngờ hỏi tôi:"
+    
+    a "Brandon, năm tới cậu định làm gì?"
+
+    "Câu hỏi của cô ấy khiến tôi bất ngờ. Bởi vì có thể tôi sẽ chuyển trường năm tới."
+
+    "Không khí trở nên hơi ngượng ngùng."
+
+    "Tôi có nên nói thật không?"
+
+    $ preferences.text_cps = 0
+
+    menu:
+        "Tôi có nên nói thật không?"
+
+        "Nên thành thật.":
+            jump saying_vi
+
+        "Tôi không muốn làm cô ấy buồn...":
+            jump not_saying_vi
+
+    label saying_vi:
+
         $ preferences.text_cps = 30
+        m "Aoi, có chuyện tôi muốn nói với cậu. Tôi chỉ không biết nó sẽ làm cậu buồn không."
 
-        m "推动兵线，EZREAL！"
+        a "Hmm? Nói đi. Không sao đâu."
 
-        "30分钟后…"
+        "Tôi cảm thấy lo lắng nhưng vẫn tiếp tục. Tôi nghĩ thành thật là tốt hơn."
 
-        m "打巴龙！！SMITE SMITE！"
+        m "Thật không may, tôi sẽ không ở đây năm tới. Tôi sẽ chuyển đến một trường đại học khác."
 
-        "5局后…"
+        a "Chờ đã, sao lại chuyển? Tôi nghĩ trường này cũng không tệ."
 
-        m "操…我现在是铁牌了…"
+        "Aoi hơi buồn khi nói vậy."
 
-        m "…"
+        m "Dĩ nhiên trường này không tệ! Nhưng cậu biết đấy... tôi nhận được học bổng tốt hơn nên không thể từ chối..."
 
-        m "发生了什么？"
+        a "Thật tiếc... Sẽ thật tuyệt nếu cậu ở lại và chúng ta vẫn gặp nhau như này..."
 
-        m "…"
+        a "Nhưng HEYYY!!! CHÚC MỪNG!!! THẬT TUYỆT VỜI!!!"
 
-        m "这比和女孩聊天好太多了 🔥🔥🔥"
-
-        return
-
-    label good_end_man:
-        $ preferences.text_cps = 30
-        "鼓起所有勇气，我站起身，走向她。"
-
-        "我忍受了太久只能远远观看而不做任何事情。现在，把这份羞涩抛开吧。"
-
-        "当我靠近时，我的心跳仿佛加速了三倍。紧张和过去与女孩交谈的不好回忆如海啸般涌来。"
-
-        "没关系，拼一把，我对自己说。"
-
-        m "嘿...打扰一下。"
-
-        "我强迫自己说出了这句话。"
-
-        "她抬头看着我。天啊！我感觉我可以就此死去升天。"
-
-        "至少我是这么想的。或许在她吃饭时打扰她有点奇怪？"
-
-        "她以非常温柔、稍微有些不耐烦的语气回答："
-
-        g "你是谁？我觉得我们不认识吧？"
-
-        "该死..."
-        "再试一次吧。"
-
-        m "嗯，我之前见过你几次。我觉得你很可爱！所以..."
-
-        "操..." 
-        "我该问什么？我得维持谈话啊..."
-
-        m "你是美国人吗？"
-
-        g "不是，其实我是国际学生。"
-
-        m "哦！"
-
-        m "我也是！我是亚洲人，你呢？"
-
-        g "真的吗？？我也是亚洲人！"
-
-        m "你好，fine shyt"
-
-        g "..."
-
-        m "哈哈..." 
-
-        m "不好意思，烂笑话..."
-
-        m "顺便说一下，我来自越南"
-
-        g "我是日本人"
-
-        m "不可能！！！你不会相信，我在学日语。"
-
-        g "太好了！那进展如何？"
-
-        m "说实话，还不错，但没人陪我练习。"
-
-        m "嘿！你能帮我练日语吗？"
-
-        g "嗯…我现在在吃饭，所以…现在不是好时机，你懂吧？"
-
-        m "哦…我不想打扰你…抱歉。"
-
-        m "嗯…很高兴认识你。"
-
-        "我转回自己的座位。"
-
-        "但在我坐下之前，她说："
-
-        g "等等！！外国人对我的语言感兴趣并不恶心。我会帮你。你用社交软件吗？IG？Line？"
-
-        m "哦，我有Line，只是几乎没用过。在美国没人用Line。我也有IG，那就用IG吧。"
-
-        g "好的好的。"
-
-        m "啊…糟糕..."
-
-        g "什么事？"
-
-        m "我手机没电了…"
-
-        g "哈哈没事！"
-
-        g "给我你的用户名，我加你。"
-
-        "她把她的iPhone给我，快速输入了我的IG账号。"
-
-        m "好吧，这是我的IG。"
-
-        g "好。你发了关注请求吗？"
-
-        m "发了！谢谢你。我会尽快给手机充电。"
-
-        g "哈哈，不客气。"
-
-        m "我让你先吃完午餐，我得去上课。回头见。"
-
-        g "嗯！回头见！"
-
-        m "哦，我忘了说，我叫Brandon！"
-
-        g "哈哈，我叫Aoi！"
-
-        m "很高兴认识你，Aoi！"
-
-        a "我也很高兴认识你！"
-
-        "整个下午，我感觉脑子快炸了。我成功了。太棒了。"
-        "我的腿都在发抖。"
-
-        jump after_cof_man
-
-    label bad_end_man:
-        $ preferences.text_cps = 30
-        
-        m "是啊，我在想什么呢？"
-        m "以前没上前，今天也不会例外…"
-
-        "就这样，我一直远远看着。三月、四月，然后五月过去了。"
-
-        "第二学年的尽头来临。"
-
-        "我转学到一所新大学，带着难以形容的悲伤。"
-
-        "也许我太胆小。我一直责怪自己。"
-
-        "真让人后悔。"
-
-        return
-
-    label after_cof_man:
-
-        scene campus
-        "自从那次谈话后，我的日子变得更快乐，更生动。"
-
-        "同时，我可以自如地和她聊天，不再像以前那样害怕被觉得恶心。"
-
-        "每次走向自助餐厅时，我总希望她坐在常坐的窗边。"
-
-        "然后我们聊白天发生的事情。"
-
-        "起初话题有些枯燥，但慢慢地，出现了更有趣的内容。"
-
-        "想想看…"
-
-        "我竟然和日本人成了朋友，真是有趣。"
-
-        "我一直以为像我这样的越南人，很难接近日本人，尤其是女孩。"
-
-        "也许我只是想太多了。"
-
-        "然后，有一天四月中旬——"
-
-        "Aoi突然问我："
-
-        a "Brandon，你明年打算做什么？"
-
-        "她的问题让我有些意外，因为我可能明年要转学。"
-
-        "气氛有些尴尬。"
-
-        "我应该告诉她吗？"
-
-        $ preferences.text_cps = 0
-
-        menu:
-            "我应该告诉她吗？"
-
-            "最好坦诚。":
-                jump saying_man
-
-            "我不想伤她的感情…":
-                jump not_saying_man
-
-    label saying_man:
-
-        $ preferences.text_cps = 30
-        m "Aoi，有件事我想告诉你。我只是担心会让你难过。"
-
-        a "嗯？说吧。应该没问题。"
-
-        "我紧张，但还是继续说。我觉得诚实会更好。"
-
-        m "很遗憾，明年我不会在这里。我会转学到另一州的大学。"
-
-        a "等等，为什么要转？我觉得这学校不差啊。"
-
-        "Aoi说话时看起来有些难过。"
-
-        m "当然不差！但你知道…我拿到了更好的奖学金，所以不能拒绝…"
-
-        a "太可惜了…如果你留下，我们可以继续这样见面就好了…"
-
-        a "但是嘿！！！恭喜！！！太棒了！！！"
-
-        m "谢谢你！！"
+        m "Cảm ơn cậu rất nhiều!!"
 
         a "..."
 
         m "..."
 
-        a "嘿，我们还可以好好享受剩下的时间，好吗？"
+        a "Này, chúng ta hãy tận hưởng thời gian còn lại khi cậu vẫn còn ở đây nhé!"
 
-        m "当然！我们还有很多时间！"
+        m "Ừ tất nhiên! Chúng ta còn nhiều thời gian!"
 
-        "那次谈话之后，虽然Aoi有时会有些伤心，但我们真的变得更亲近了。"
+        "Sau cuộc trò chuyện đó, dù Aoi hơi buồn khi nhắc lại, hai chúng tôi thực sự trở nên gần gũi hơn."
 
-        "最终，不可避免的事情发生了。期末考试结束，第二学年结束，我必须离开。"
+        "Cuối cùng, điều không thể tránh khỏi đã đến. Kỳ thi kết thúc. Năm thứ hai kết thúc. Và tôi phải đi."
 
         scene airport
 
-        "离别当天，她给我发消息："
+        "Ngày ra đi, cô ấy nhắn tin cho tôi:"
 
-        a "今天是你离开的日子，对吧？"
+        a "Hôm nay là ngày cậu đi phải không?"
 
-        m "是的…"
+        m "Ừ..."
 
-        a "真遗憾我不能当面说再见。我现在在日本 😭😭"
+        a "Thật tiếc là tôi không thể nói lời tạm biệt trực tiếp. Tôi đang ở Nhật. 😭😭"
 
-        m "哈哈，没关系。但我会想你的。我到那边会告诉你我的新学校！"
+        m "Haha, không sao đâu. Nhưng tôi sẽ nhớ cậu. Tôi sẽ kể cho cậu về trường mới khi đến đó!"
 
-        a "好！别忘了给我发信息。如果你忘了，我要杀你！"
+        a "Ừ! Đừng quên nhắn tin nhé. Nếu quên thì tôi sẽ giết cậu!"
 
-        m "我永远不会忘记你，笨蛋！"
+        m "Tôi sẽ không bao giờ quên cậu đâu, đồ ngốc!"
 
-        a "你最好别忘！哼 😤"
+        a "Cậu tốt nhất đấy! hmph 😤"
 
-        m "哈哈，回头见，Aoi！"
+        m "Ahaha, hẹn gặp lại Aoi!"
 
-        a "回头见！拜拜"
+        a "Hẹn gặp lại! Tạm biệt"
 
-        "主角搬到新大学。即使距离拉开，他们仍保持联系。"
+        "Nhân vật chính chuyển đến một trường đại học mới. Dù khoảng cách giữa họ lớn hơn, họ vẫn giữ liên lạc."
 
-        "随着时间推移，Aoi和主角更亲近。谁知道——也许光明的未来在等着他们。"
+        "Aoi và nhân vật chính trở nên gần gũi hơn theo thời gian. Ai mà biết—có thể tương lai tươi sáng đang chờ đợi họ."
 
         return
 
-    label not_saying_man:
+    label not_saying_vi:
 
         $ preferences.text_cps = 30
-        m "嗯，我打算找实习机会。因为三年级应该早点开始。"
+        m "À, tôi đang định tìm cơ hội thực tập. Vì năm ba là lúc nên bắt đầu sớm."
 
-        a "哦，我明白了。"
+        a "Ồ, tôi hiểu rồi."
 
-        m "你呢？"
+        m "Còn cậu thì sao?"
 
-        a "我还不确定。明年是我的二年级，所以可能和今年差不多。"
+        a "Tôi chưa chắc. Năm tới sẽ là năm hai của tôi, nên có lẽ cũng giống năm nay."
 
-        m "毕业后你打算回日本吗？"
+        m "Cậu có định về Nhật sau khi tốt nghiệp không?"
 
-        a "我还不确定是回去还是留在这里…"
+        a "Tôi chưa chắc là muốn về hay ở lại..."
 
-        m "是啊…很难选择。"
+        m "Ừ... Thật khó để quyết định."
 
-        "期末考试来了，我离开了，Aoi完全不知道。"
+        "Kỳ thi kết thúc, và tôi rời đi mà Aoi không hề biết."
 
-        a "你在哪？我一点都没见到你。新学年快开始了 😢😢😢"
+        a "Cậu đâu rồi? Tôi chẳng thấy cậu đâu cả. Năm học mới sắp bắt đầu. 😢😢😢"
 
-        m "Aoi…你不会因为我要说的事生气吧？"
+        m "Aoi… cậu sẽ không giận tôi về chuyện sắp nói chứ?"
 
-        a "嗯？说吧，我不会生气。"
+        a "Hmm? Nói đi, tôi sẽ không giận đâu."
 
-        m "其实…我转学了。抱歉没告诉你。"
+        m "Thực ra… tôi đã chuyển trường. Xin lỗi vì không nói với cậu."
 
-        m "我不想伤害你的感情。"
+        m "Tôi không muốn làm cậu buồn."
 
-        "Aoi停顿了一下才回答。"
+        "Aoi dừng lại một chút trước khi trả lời."
 
-        a "啊哈哈…没关系。我们仍然可以保持联系，只是不能面对面…"
+        a "Ah haha… không sao đâu. Chúng ta vẫn có thể giữ liên lạc. Chỉ là không gặp trực tiếp thôi…"
 
-        m "你真的不难过吗？"
+        m "Cậu thật sự không buồn sao?"
 
-        a "有点，但你知道…这是你的生活，如果让你开心，我也开心！"
+        a "Hơi buồn chút, nhưng cậu biết đấy… nếu điều đó làm cậu vui, tôi cũng vui theo!"
 
-        m "哦谢谢！！我只是怕让你难过。我真的很抱歉 😭😭😭"
+        m "Cảm ơn cậu!! Tôi chỉ sợ làm cậu buồn thôi. Tôi thật sự xin lỗi. 😭😭😭"
 
-        "但实际上，Aoi因为他不诚实而非常伤心。"
+        "Nhưng thực tế, Aoi rất buồn vì tôi không thành thật với cô ấy."
 
-        "虽然保持联系，但由于距离，他们的亲近永远无法进一步加深。"
+        "Dù họ vẫn giữ liên lạc, sự gần gũi giữa họ không bao giờ phát triển hơn vì khoảng cách."
 
-        "最终，他确实交到了一位日本朋友。但因为不诚实，这感觉有些苦涩。"
+        "Cuối cùng, tôi đã có một người bạn Nhật. Nhưng cảm giác vẫn đắng ngắt vì tôi không thành thật."
 
         return
 

@@ -61,8 +61,6 @@ define gui.text_font = "NotoSans_default.ttf"
 
 define gui.text_font_jp = "NotoSansJP.ttf"
 
-define gui.text_font_sc = "NotoSansSC.ttf"
-
 ## The font used for character names.
 define gui.name_text_font = "NotoSans_default.ttf"
 
