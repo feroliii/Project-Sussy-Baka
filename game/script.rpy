@@ -87,23 +87,22 @@ label start:
         show m normal at left
         
 
-
         "I will never forget the image of that girl. The one who perhaps made my cold heart tremble once again."
-        hide m normal
+
         "But it seems that the poetic scenes I dreamed of will never become reality."
-        show m happy at left
+ 
         "All I can do is stand and watch her from afar, unable to do anything."
-        hide m happy
+
         "“It's not possible.” “We don't even know each other—how could you talk to her?”"
-        show m sad at left
+
         "Those voices kept echoing in my mind. I truly didn't know what to do anymore."
-        hide m sad
+
         "Today is like every other day. The same familiar cafeteria, the same familiar seat. She's sitting there again. And me, as always, just watching from afar."
-        show m emba at left
+ 
         "My final year here before transferring somewhere completely different."
-        hide m emba
+
         "AAAAA! This could be that “moment”—when the boy and girl leads accidentally meet. Too bad I'm just a side character."
-        show m confuse at left
+
         "Damn it. Should I approach her?"
 
         $ preferences.text_cps = 0
@@ -133,6 +132,8 @@ label start:
         scene sky
 
         $ preferences.text_cps = 30
+
+        hide m normal
 
         m "PUSH THE WAVE SHIT EZREAL"
 
@@ -168,6 +169,8 @@ label start:
 
         "Whatever, it's all or nothing, I told myself."
 
+        show m confuse at left
+
         m "Hey... excuse me."
 
         "I forced the words out."
@@ -182,7 +185,8 @@ label start:
 
         "Damn..."
         "Let's push a bit further."
-
+        hide m confuse
+        show m emba at left
         m "Well, I've seen you around a few times. I think you're cute! So..."
         
         "Fuck..." 
@@ -200,6 +204,8 @@ label start:
 
         m "Ni hao fine shyt"
 
+        hide m emba
+        show m confuse at left
         g "..."
         
         m "haha..." 
@@ -209,19 +215,23 @@ label start:
         m "By the way I'm from Vietnam"
 
         g "I'm japanese"
-
+        hide m confuse
+        show m happy at left
         m "No waaay!!! You will not believe but I'm learning japanese."
 
         g "That's nice! And who is it going?"
-
+        hide m happy
+        show m emba at left
         m "To be honest, kinda good but I don't anyone to practice with."
 
         m "Hey! Could you help me? With practicing the japanese."
         
         g "Hmm... I'm eating right now so... It's not a good time you know?"
 
+        hide m emba
+        show m happy at left
         m "Oh... I don't want to bother you... Sorry."
-
+        
         m "Well... nice to meet you."
 
         "I turned back to my usual table."
@@ -229,7 +239,9 @@ label start:
         "But before I could sit down, she said:"
 
         g "Wait!! It's not that disgusting that a foreigner is interested in my language. I'll help you. Do you use any social media? IG? Line?"
-
+        
+        hide m happy
+        show m emba at left
         m "Oh, I have Line, just never really used it. No one uses Line in the U.S. anyway. I also have IG. Let's go with IG."
 
         g "Ok ok."
@@ -249,7 +261,8 @@ label start:
         m "Alright, here's my IG."
 
         g "Okay. Did you request to follow?"
-
+        hide m emba
+        show m happy at left
         m "Yeah! Thank you so much. I'll charge my phone as soon as possible."
 
         g "Haha, no problem."
@@ -273,6 +286,7 @@ label start:
 
     label bad_end:
         
+        hide m happy
         stop music fadeout 1.0
 
         play music driftaway volume 0.6
@@ -303,6 +317,7 @@ label start:
         play music bleached volume 0.6
 
         scene campus
+        show m happy at left
         "Since that conversation, my days have been replaced with happier, more lively ones."
 
         "At the same time, I could comfortably start conversations with her without fearing being seen as disgusting like before."
@@ -327,6 +342,8 @@ label start:
         
         a "Brandon, what are you planning to do next year?"
 
+        hide m happy
+        show m confuse at left
         "Her question caught me off guard. Because I might be transferring next year."
 
         "The atmosphere became slightly awkward."
@@ -358,7 +375,8 @@ label start:
         a "Hmm? Go ahead. It should be fine."
 
         "I felt nervous but continued anyway. I thought being honest would be better."
-
+        hide m confuse
+        show m sad at left
         m "Unfortunately, I won't be here next year. I'll be transferring to a university in another state."
 
         a "Wait, why transfer? I think this school isn't that bad."
@@ -368,7 +386,8 @@ label start:
         m "Of course it's not bad! But you know... I got a better scholarschip there so I couldn't decline it..."
 
         a "That's a shame... It would've been nice if you stayed and we could keep meeting like this..."
-
+        hide m sad
+        show m happy at left
         a "But HEYYY!!! CONGRATS!!! THAT'S REALLY GOOD!!!"
 
         m "Thank you so much!!"
@@ -377,10 +396,13 @@ label start:
 
         m "..."
 
+        hide m happy
+        show m emba at left
         a "Hey we can enjoy the time we have left while you're still here, okay?"
 
         m "Yeah of course! We have a lot of time!"
 
+        hide m emba
         "After that conversation, although Aoi felt a bit sad whenever it came up, the two of us actually grew closer."
 
         "Eventually, the inevitable came. Final exams passed. The second year ended. And I had to leave."
@@ -389,17 +411,19 @@ label start:
         scene airport
 
         "On the day of departure, she messages me:"
-
+        show m sad at left
         a "So today's the day you leave, right?"
 
         m "Yeah..."
 
         a "It's a shame I can't say goodbye in person. I'm in Japan right now. (━┳━ _ ━┳━)"
-
+        hide m sad
+        show m happy at left
         m "Haha, it's okay. But I'll miss you. I'll definitely tell you about my new school when I get there!"
 
         a "Yeah! Don't forget to message me. If you forget I gonna kill you!."
-
+        hide m happy
+        show m emba at left
         m "I'd never forget you dummy!"
         
         a "You better not! hmph ╰(⸝⸝⸝´꒳`⸝⸝⸝)╯"
@@ -421,6 +445,9 @@ label start:
         play music onceupon volume 0.5
 
         $ preferences.text_cps = 30
+
+        hide m confuse
+        show m happy at left
         m "Well, I'm planning to look for internship opportunities. Since third year is when you should start early."
 
         a "Oh, I see."
@@ -435,12 +462,16 @@ label start:
 
         m "Yeah... It's hard to choose."
 
+        hide m happy
         "Final exams came, and I left without Aoi ever knowing."
 
         "On the begin of the next year, Aoi texts me."
 
+        show m normal at left
         a "Where are you? I haven't seen you at all. The new school year is about to start. (┳◇┳)"
 
+        hide m normal
+        show m confuse at left
         m "Aoi… you won't be mad at me for what I'm about to say, right?"
 
         a "Hmm? Go ahead, I won't be mad."
@@ -450,15 +481,19 @@ label start:
         m "I didn't want to hurt your feelings."
 
         "Aoi paused a bit before replying."
-
+        hide m confuse
+        show m happy at left
         a "Ah haha… it's okay. We can still stay in touch. Just not in person…"
 
+        hide m happy
+        show m emba at left
         m "You're really not sad?"
 
         a "Kinda, but you know... it's your life and if it makes you happy I'm happy too!"
 
         m "Ohh thank you!! I was just afraid of making you sad. I'm really sorry. (╯_╰)"
 
+        hide m emba
         "But in reality, Aoi was very sad that he wasn't honest with her."
 
         "Even though they stayed in contact, their closeness could never grow further due to the distance."
