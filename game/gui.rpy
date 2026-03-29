@@ -65,7 +65,7 @@ define gui.name_text_font = "Metropolis-Regular.otf"
 ## The font used for out-of-game text.
 define gui.interface_text_font = "Metropolis-Regular.otf"
 
-define chinese_japanese_font = "LongCang-Regular.ttf"
+define chinese_japanese_font = "NotoSans.ttf"
 
 ## The size of normal dialogue text.
 define gui.text_size = 33

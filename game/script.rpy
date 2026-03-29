@@ -2310,7 +2310,7 @@ label start:
         "整个下午，我感觉脑子快炸了。我成功了。太棒了。"
         "我的腿都在发抖。"
 
-        jump after_cof
+        jump after_cof_man
 
     label bad_end_man:
         $ preferences.text_cps = 30
