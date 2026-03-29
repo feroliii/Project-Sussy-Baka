@@ -15,6 +15,8 @@ define na_jp = Character("", what_font="NotoSansJP.ttf")
 define na_jp_sec = Character("", what_font="NotoSansJP.ttf")
 define na_jp_third = Character("", what_font="NotoSansJP.ttf")
 
+image m normal   = "assets/character_sprite/main-normal.png"
+
 define cafe = Image('cafe.png')
 define airport = Image('airport.jpg')
 define campus = Image('campus.png')
@@ -25,7 +27,7 @@ define sakura = Image('sakura.jpg')
 define audio.lecarrousel = "assets/ost/Le-Carrousel.ogg"
 define audio.newhome = "assets/ost/New-Home.ogg"
 define audio.wind = "assets/ost/Wind.ogg"
-define audio.lol = "assets/ost/league-samba.ogg"
+define audio.lol = "assets/ost/league_samba.ogg"
 define audio.driftaway = "assets/ost/Drifting-away.ogg"
 define audio.ballerina = "assets/ost/Ballerina.ogg"
 define audio.bleached = "assets/ost/Bleached.ogg"
@@ -75,6 +77,8 @@ label start:
         play music newhome volume 0.6
 
         scene cafe
+
+        show m normal at center
 
         "I will never forget the image of that girl. The one who perhaps made my cold heart tremble once again."
 
