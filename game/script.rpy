@@ -17,10 +17,26 @@ define na_jp_third = Character(" ", what_font="NotoSansJP.ttf")
 define cafe = Image('cafe.png')
 define airport = Image('airport.jpg')
 define campus = Image('campus.png')
+define sky = Image('sky.jpg')
+define sakura = Image('sakura.jpg')
+
+#These are copyright music that I found on the Internet, I will change all of them as soon as I done working on them. These does not belong to me just to be  clear.
+define audio.lecarrousel = "assets/ost/Le-Carrousel.ogg"
+define audio.newhome = "assets/ost/New-Home.ogg"
+define audio.wind = "assets/ost/Wind.ogg"
+define audio.lol = "assets/ost/legend-nver-die.ogg"
+define audio.driftaway = "assets/ost/Drifting-away.ogg"
+define audio.ballerina = "assets/ost/Ballerina.ogg"
+define audio.bleached = "assets/ost/Bleached.ogg"
+define audio.onceupon = "assets/ost/once-upon-a-time.ogg"
 
 # The game starts here.
 
 label start:
+
+    stop music fadeout 2.0
+
+    play music lecarrousel
 
     menu:
         "Language menu"
@@ -52,6 +68,11 @@ label start:
 
 
     label start_en:
+
+        stop music fadeout 1.0
+
+        play music newhome volume 0.6
+
         scene cafe
 
         "I will never forget the image of that girl. The one who perhaps made my cold heart tremble once again."
@@ -91,6 +112,13 @@ label start:
                 jump bad_end
 
     label league_end:
+
+        stop music fadeout 1.0
+
+        play music lol volume 0.5 
+
+        scene sky
+
         $ preferences.text_cps = 30
 
         m "PUSH THE WAVE SHIT EZREAL"
@@ -114,6 +142,10 @@ label start:
         return
 
     label good_end:
+        stop music fadeout 1.0
+
+        play music wind volume 0.7
+
         $ preferences.text_cps = 30
         "Gathering all my courage, I stood up and walked toward her."
 
@@ -227,6 +259,13 @@ label start:
         jump after_cof
 
     label bad_end:
+        
+        stop music fadeout 1.0
+
+        play music driftaway volume 0.6
+
+        scene sky
+
         $ preferences.text_cps = 30
         
         m "Yeah, what am I thinking?"
@@ -245,6 +284,10 @@ label start:
         return
 
     label after_cof:
+
+        stop music fadeout 1.0
+
+        play music bleached volume 0.6
 
         scene campus
         "Since that conversation, my days have been replaced with happier, more lively ones."
@@ -282,7 +325,7 @@ label start:
         menu:
             "Should I tell her?"
 
-            "Better be transparent.":
+            "Better tell the truth.":
                 jump saying
 
             "I don't want to hurt her feelings...":
@@ -291,6 +334,12 @@ label start:
     label saying:
 
         $ preferences.text_cps = 30
+
+        stop music fadeout 1.0
+
+        play music ballerina volume 0.6
+
+
         m "Aoi, there's something I want to tell you. I just don't know if it'll make you sad."
 
         a "Hmm? Go ahead. It should be fine."
@@ -332,7 +381,7 @@ label start:
 
         m "Yeah..."
 
-        a "It's a shame I can't say goodbye in person. I'm in Japan right now. 😭😭"
+        a "It's a shame I can't say goodbye in person. I'm in Japan right now. (━┳━ _ ━┳━)"
 
         m "Haha, it's okay. But I'll miss you. I'll definitely tell you about my new school when I get there!"
 
@@ -340,7 +389,7 @@ label start:
 
         m "I'd never forget you dummy!"
         
-        a "You better not! hmph 😤"
+        a "You better not! hmph ╰(⸝⸝⸝´꒳`⸝⸝⸝)╯"
 
         m "Ahaha see you later Aoi!"
         
@@ -353,6 +402,10 @@ label start:
         return
 
     label not_saying:
+
+        stop music fadeout 1.0
+
+        play music onceupon volume 0.5
 
         $ preferences.text_cps = 30
         m "Well, I'm planning to look for internship opportunities. Since third year is when you should start early."
@@ -371,7 +424,9 @@ label start:
 
         "Final exams came, and I left without Aoi ever knowing."
 
-        a "Where are you? I haven't seen you at all. The new school year is about to start. 😢😢😢"
+        "On the begin of the next year, Aoi texts me."
+
+        a "Where are you? I haven't seen you at all. The new school year is about to start. (┳◇┳)"
 
         m "Aoi… you won't be mad at me for what I'm about to say, right?"
 
@@ -389,7 +444,7 @@ label start:
 
         a "Kinda, but you know... it's your life and if it makes you happy I'm happy too!"
 
-        m "Ohh thank you!! I was just afraid of making you sad. I'm really sorry. 😭😭😭"
+        m "Ohh thank you!! I was just afraid of making you sad. I'm really sorry. (╯_╰)"
 
         "But in reality, Aoi was very sad that he wasn't honest with her."
 
