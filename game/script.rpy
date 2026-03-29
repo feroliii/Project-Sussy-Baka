@@ -21,6 +21,8 @@ image m happy   = "assets/character_sprite/main-happy.png"
 image m emba   = "assets/character_sprite/main-emba.png"
 image m confuse   = "assets/character_sprite/main-confuse.png"
 
+image a normal   = "assets/character_sprite/a-normal.png"
+
 
 
 define cafe = Image('cafe.png')
@@ -170,7 +172,7 @@ label start:
         "Whatever, it's all or nothing, I told myself."
 
         show m confuse at left
-
+        show a normal at right 
         m "Hey... excuse me."
 
         "I forced the words out."
@@ -278,7 +280,7 @@ label start:
         m "Nice to meet you Aoi!"
 
         a "Nice to meet you too!"
-
+        hide a normal
         "That entire afternoon, my mind felt like it was exploding. I did it. Amazing."
         "Sheeesh my legs are shaking."
 
@@ -339,7 +341,7 @@ label start:
         "Then one day in mid-April—"
 
         "Aoi suddenly asked me:"
-        
+        show a normal at right 
         a "Brandon, what are you planning to do next year?"
 
         hide m happy
@@ -431,7 +433,8 @@ label start:
         m "Ahaha see you later Aoi!"
         
         a "See you! Bye bye"
-
+        hide m emba
+        hide a normal
         "The main character moved to a new university. Even though the distance between them grew, they continued to stay in touch."
 
         "Aoi and the main character became closer over time. Who knows—maybe a bright future awaits them."
@@ -494,6 +497,7 @@ label start:
         m "Ohh thank you!! I was just afraid of making you sad. I'm really sorry. (╯_╰)"
 
         hide m emba
+        hide a normal
         "But in reality, Aoi was very sad that he wasn't honest with her."
 
         "Even though they stayed in contact, their closeness could never grow further due to the distance."
