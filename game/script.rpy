@@ -3,16 +3,17 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define a = Character("Aoi")
-define m = Character("Me")
-define g = Character("Girl")
+define a = Character("Aoi", callback=girl_speak)
+define m = Character("Me", callback=man_speak)
+define g = Character("Girl", callback=girl_speak)
 
-define a_jp = Character("Aoi",  what_font="NotoSansJP.ttf")
-define m_jp = Character("Me", what_font="NotoSansJP.ttf")
-define g_jp = Character("Girl", what_font="NotoSansJP.ttf")
-define na_jp = Character(" ", what_font="NotoSansJP.ttf")
-define na_jp_sec = Character(" ", what_font="NotoSansJP.ttf")
-define na_jp_third = Character(" ", what_font="NotoSansJP.ttf")
+define a_jp = Character("Aoi", what_font="NotoSansJP.ttf", callback=girl_speak)
+define m_jp = Character("Me", what_font="NotoSansJP.ttf", callback=man_speak)
+define g_jp = Character("Girl", what_font="NotoSansJP.ttf", callback=girl_speak)
+
+define na_jp = Character("", what_font="NotoSansJP.ttf", callback=man_speak)
+define na_jp_sec = Character("", what_font="NotoSansJP.ttf", callback=man_speak)
+define na_jp_third = Character("", what_font="NotoSansJP.ttf", callback=man_speak)
 
 define cafe = Image('cafe.png')
 define airport = Image('airport.jpg')
@@ -458,6 +459,10 @@ label start:
 
     label inicio_pt:
 
+        stop music fadeout 1.0
+
+        play music newhome volume 0.6
+
         scene cafe
 
         "Eu nunca vou esquecer a imagem daquela garota. Aquela que talvez fez meu coração frio tremer mais uma vez."
@@ -497,6 +502,13 @@ label start:
                 jump bad_end_pt
 
     label league_end_pt:
+
+        stop music fadeout 1.0
+
+        play music lol volume 0.5 
+
+        scene sky
+
         $ preferences.text_cps = 30
 
         m "EMPURRA A ONDA EZREAL MERDA"
@@ -520,6 +532,12 @@ label start:
         return
 
     label good_end_pt:
+
+        
+        stop music fadeout 1.0
+
+        play music wind volume 0.7
+
         $ preferences.text_cps = 30
 
         "Juntando toda a minha coragem, eu levantei e fui até ela."
@@ -635,6 +653,13 @@ label start:
         jump after_cof_pt
 
     label bad_end_pt:
+
+        stop music fadeout 1.0
+
+        play music driftaway volume 0.6
+
+        scene sky
+
         $ preferences.text_cps = 30
 
         m "É... o que eu tava pensando?"
@@ -654,6 +679,11 @@ label start:
         return
 
     label after_cof_pt:
+
+        
+        stop music fadeout 1.0
+
+        play music bleached volume 0.6
 
         scene campus
 
@@ -699,6 +729,10 @@ label start:
                 jump not_saying_pt
 
         label saying_pt:
+
+        stop music fadeout 1.0
+
+        play music ballerina volume 0.6
 
         $ preferences.text_cps = 30
 
@@ -765,6 +799,10 @@ label start:
 
     label not_saying_pt:
 
+        stop music fadeout 1.0
+
+        play music onceupon volume 0.5
+
         $ preferences.text_cps = 30
 
         m "Bom, eu estou pensando em procurar estágios. Já que no terceiro ano é quando você deve começar mais cedo."
@@ -813,6 +851,12 @@ label start:
 
 
     label start_es:
+
+        
+        stop music fadeout 1.0
+
+        play music newhome volume 0.6
+
         scene cafe
 
         "Nunca olvidaré la imagen de esa chica. La que quizás hizo que mi corazón frío temblara una vez más."
@@ -851,29 +895,42 @@ label start:
 
 
     label league_end_es:
-            $ preferences.text_cps = 30
 
-            m "¡EMPUJA LA OLA EZREAL MIERDA"
+        stop music fadeout 1.0
 
-            "30 minutos después..."
+        play music lol volume 0.5 
 
-            m "¡TOMA EL BARÓN!! ¡SMITE SMITE!"
+        scene sky
 
-            "5 partidas después..."
+        $ preferences.text_cps = 30
 
-            m "Mierda... ahora soy hierro..."
+        m "¡EMPUJA LA OLA EZREAL MIERDA"
 
-            m "..."
+        "30 minutos después..."
 
-            m "¿Qué pasó?"
-            
-            m "..."
-            
-            m "Eso fue mucho mejor que hablar con una chica 🔥🔥🔥"
+        m "¡TOMA EL BARÓN!! ¡SMITE SMITE!"
 
-            return
+        "5 partidas después..."
+
+        m "Mierda... ahora soy hierro..."
+
+        m "..."
+
+        m "¿Qué pasó?"
+        
+        m "..."
+        
+        m "Eso fue mucho mejor que hablar con una chica 🔥🔥🔥"
+
+        return
 
     label good_end_es:
+
+        
+        stop music fadeout 1.0
+
+        play music wind volume 0.7
+
         $ preferences.text_cps = 30
         "Reuniendo todo mi valor, me levanté y caminé hacia ella."
 
@@ -987,6 +1044,11 @@ label start:
         jump after_cof_es
 
     label bad_end_es:
+        stop music fadeout 1.0
+
+        play music driftaway volume 0.6
+
+        scene sky
         $ preferences.text_cps = 30
         
         m "Sí, ¿en qué estaba pensando?"
@@ -1005,6 +1067,10 @@ label start:
         return
 
     label after_cof_es:
+
+        stop music fadeout 1.0
+
+        play music bleached volume 0.6
 
         scene campus
         "Desde esa conversación, mis días se llenaron de más felicidad y vitalidad."
@@ -1050,6 +1116,9 @@ label start:
 
     label saying_es:
 
+        stop music fadeout 1.0
+
+        play music ballerina volume 0.6
         $ preferences.text_cps = 30
         m "Aoi, hay algo que quiero decirte. Solo que no sé si te entristecerá."
 
@@ -1113,6 +1182,10 @@ label start:
 
     label not_saying_es:
 
+        stop music fadeout 1.0
+
+        play music onceupon volume 0.5
+
         $ preferences.text_cps = 30
         m "Bueno, estoy planeando buscar oportunidades de prácticas. Ya que el tercer año es cuando uno debería comenzar temprano."
 
@@ -1161,6 +1234,10 @@ label start:
 
     label start_ita:
 
+        stop music fadeout 1.0
+
+        play music newhome volume 0.6
+
         scene cafe
 
         "Non dimenticherò mai l'immagine di quella ragazza. Quella che forse ha fatto tremare di nuovo il mio cuore freddo."
@@ -1198,6 +1275,10 @@ label start:
                 jump bad_end_ita
 
     label league_end_ita:
+        stop music fadeout 1.0
+
+        play music lol volume 0.5 
+
         $ preferences.text_cps = 30
 
         m "SPINGI L'ONDA MERDA EZREAL"
@@ -1218,9 +1299,13 @@ label start:
 
         m "È stato molto meglio che parlare con una ragazza 🔥🔥🔥"
 
-    return
+        return
 
     label good_end_ita:
+
+        stop music fadeout 1.0
+
+        play music wind volume 0.7
         $ preferences.text_cps = 30
         "Radunando tutto il mio coraggio, mi alzai e mi avvicinai a lei."
 
@@ -1334,6 +1419,13 @@ label start:
         jump after_cof_ita
 
     label bad_end_ita:
+
+        stop music fadeout 1.0
+
+        play music driftaway volume 0.6
+
+        scene sky
+
         $ preferences.text_cps = 30
         
         m "Sì, cosa stavo pensando?"
@@ -1352,6 +1444,10 @@ label start:
         return
 
     label after_cof_ita:
+
+        stop music fadeout 1.0
+
+        play music bleached volume 0.6
 
         scene campus
         "Da quella conversazione, i miei giorni sono diventati più felici e vivaci."
@@ -1396,6 +1492,10 @@ label start:
                 jump not_saying_ita
 
     label saying_ita:
+
+        stop music fadeout 1.0
+
+        play music ballerina volume 0.6
 
         $ preferences.text_cps = 30
         m "Aoi, c'è qualcosa che voglio dirti. Solo che non so se ti rattristerà."
@@ -1460,6 +1560,10 @@ label start:
 
     label not_saying_ita:
 
+        stop music fadeout 1.0
+
+        play music onceupon volume 0.5
+
         $ preferences.text_cps = 30
         m "Beh, sto pianificando di cercare opportunità di tirocinio. Poiché il terzo anno è quando dovresti iniziare presto."
 
@@ -1507,6 +1611,9 @@ label start:
 
     label start_fr:
             
+        stop music fadeout 1.0
+
+        play music newhome volume 0.6
         scene cafe
 
         "Je n'oublierai jamais l'image de cette fille. Celle qui, peut-être, a fait trembler mon cœur froid une fois de plus."
@@ -1544,6 +1651,13 @@ label start:
                 jump bad_end_fr
 
     label league_end_fr:
+
+        stop music fadeout 1.0
+
+        play music lol volume 0.5 
+
+        scene sky
+
         $ preferences.text_cps = 30
 
         m "POUSSE LA VAGUE MERDE EZREAL"
@@ -1564,8 +1678,13 @@ label start:
 
         m "C'était bien mieux que de parler à une fille 🔥🔥🔥"
 
-    return
+        return
+
     label good_end_fr:
+
+        stop music fadeout 1.0
+
+        play music wind volume 0.7
         $ preferences.text_cps = 30
         "Rassemblant tout mon courage, je me levai et m'avançai vers elle."
 
@@ -1679,6 +1798,13 @@ label start:
         jump after_cof_fr
 
     label bad_end_fr:
+
+        stop music fadeout 1.0
+
+        play music driftaway volume 0.6
+
+        scene sky
+
         $ preferences.text_cps = 30
         
         m "Oui, à quoi pensais-je ?"
@@ -1698,6 +1824,9 @@ label start:
 
     label after_cof_fr:
 
+        stop music fadeout 1.0
+
+        play music bleached volume 0.6
         scene campus
         "Depuis cette conversation, mes journées sont devenues plus joyeuses et animées."
 
@@ -1741,6 +1870,10 @@ label start:
                 jump not_saying_fr
 
     label saying_fr:
+
+        stop music fadeout 1.0
+
+        play music ballerina volume 0.6
 
         $ preferences.text_cps = 30
         m "Aoi, il y a quelque chose que je veux te dire. Je ne sais pas si ça va te rendre triste."
@@ -1805,6 +1938,10 @@ label start:
 
     label not_saying_fr:
 
+        stop music fadeout 1.0
+
+        play music onceupon volume 0.5
+
         $ preferences.text_cps = 30
         m "Eh bien, je prévois de chercher des opportunités de stage. Puisque la troisième année est le moment où il faut commencer tôt."
 
@@ -1853,6 +1990,10 @@ label start:
 
 
     label start_german:
+
+        stop music fadeout 1.0
+
+        play music newhome volume 0.6
             
         scene cafe
 
@@ -1891,6 +2032,13 @@ label start:
                 jump bad_end_german
 
     label league_end_german:
+
+        stop music fadeout 1.0
+
+        play music lol volume 0.5 
+
+        scene sky
+
         $ preferences.text_cps = 30
 
         m "SCHIEB DIE WELLE VERDAMMT EZREAL"
@@ -1914,6 +2062,12 @@ label start:
         return
 
     label good_end_german:
+
+        stop music fadeout 1.0
+
+        play music wind volume 0.7
+
+
         $ preferences.text_cps = 30
         "Mit all meinem Mut stand ich auf und ging auf sie zu."
 
@@ -2027,6 +2181,13 @@ label start:
         jump after_cof_german
 
     label bad_end_german:
+
+        stop music fadeout 1.0
+
+        play music driftaway volume 0.6
+
+        scene sky
+        
         $ preferences.text_cps = 30
         
         m "Ja, was denke ich mir nur?"
@@ -2045,6 +2206,10 @@ label start:
         return
 
     label after_cof_german:
+
+        stop music fadeout 1.0
+
+        play music bleached volume 0.6
 
         scene campus
         "Seit diesem Gespräch wurden meine Tage glücklicher und lebendiger."
@@ -2089,6 +2254,10 @@ label start:
                 jump not_saying_german
 
     label saying_german:
+
+        stop music fadeout 1.0
+
+        play music ballerina volume 0.6
 
         $ preferences.text_cps = 30
         m "Aoi, es gibt etwas, das ich dir sagen möchte. Ich weiß nur nicht, ob es dich traurig macht."
@@ -2153,6 +2322,10 @@ label start:
 
     label not_saying_german:
 
+        stop music fadeout 1.0
+
+        play music onceupon volume 0.5
+
         $ preferences.text_cps = 30
         m "Nun, ich plane, nach Praktikumsmöglichkeiten zu suchen. Im dritten Jahr sollte man früh anfangen."
 
@@ -2199,6 +2372,11 @@ label start:
         return
 
     label start_vi:
+
+        stop music fadeout 1.0
+
+        play music newhome volume 0.6
+
         scene cafe
 
         "Tôi sẽ không bao giờ quên hình ảnh của cô gái đó. Người mà có lẽ đã khiến trái tim lạnh lùng của tôi rung động một lần nữa."
@@ -2238,6 +2416,13 @@ label start:
                 jump bad_end_vi
 
     label league_end_vi:
+
+        stop music fadeout 1.0
+
+        play music lol volume 0.5 
+
+        scene sky
+
             $ preferences.text_cps = 30
 
             m "Đẩy wave lính đi Ezreal, dễ ẹc à sao mày ngo thế con!"
@@ -2263,6 +2448,11 @@ label start:
             return
 
     label good_end_vi:
+
+        stop music fadeout 1.0
+
+        play music wind volume 0.7
+
             $ preferences.text_cps = 30
             "Tập hết can đảm, tôi đứng dậy và tiến về phía cô ấy."
 
@@ -2378,6 +2568,13 @@ label start:
             jump after_cof_vi
 
     label bad_end_vi:
+
+        stop music fadeout 1.0
+
+        play music driftaway volume 0.6
+
+        scene sky
+
             $ preferences.text_cps = 30
             
             m "Ừ, tôi đang nghĩ gì vậy?"
@@ -2397,49 +2594,57 @@ label start:
 
     label after_cof_vi:
 
-    scene campus
-    "Kể từ cuộc trò chuyện đó, những ngày của tôi trở nên hạnh phúc và sống động hơn."
+        stop music fadeout 1.0
 
-    "Đồng thời, tôi có thể bắt đầu trò chuyện với cô ấy mà không sợ bị coi là khó chịu như trước."
+        play music bleached volume 0.6
 
-    "Mỗi khi tôi đi đến căn tin, tôi luôn hy vọng cô ấy sẽ ngồi gần cửa sổ quen thuộc." 
-    
-    "Rồi chúng tôi trò chuyện về những điều xảy ra trong ngày."
+        scene campus
+        "Kể từ cuộc trò chuyện đó, những ngày của tôi trở nên hạnh phúc và sống động hơn."
 
-    "Lúc đầu, chủ đề hơi khô khan. Nhưng dần dần, những chuyện thú vị hơn xuất hiện."
+        "Đồng thời, tôi có thể bắt đầu trò chuyện với cô ấy mà không sợ bị coi là khó chịu như trước."
 
-    "Nhìn lại..." 
-    
-    "Thật thú vị khi tôi đã trở thành bạn với một người Nhật."
+        "Mỗi khi tôi đi đến căn tin, tôi luôn hy vọng cô ấy sẽ ngồi gần cửa sổ quen thuộc." 
+        
+        "Rồi chúng tôi trò chuyện về những điều xảy ra trong ngày."
 
-    "Tôi luôn nghĩ người như tôi — một người Việt — sẽ khó gần gũi với một người Nhật, đặc biệt là con gái."
+        "Lúc đầu, chủ đề hơi khô khan. Nhưng dần dần, những chuyện thú vị hơn xuất hiện."
 
-    "Có lẽ tôi chỉ hay suy nghĩ quá nhiều."
+        "Nhìn lại..." 
+        
+        "Thật thú vị khi tôi đã trở thành bạn với một người Nhật."
 
-    "Rồi một ngày giữa tháng Tư —"
+        "Tôi luôn nghĩ người như tôi — một người Việt — sẽ khó gần gũi với một người Nhật, đặc biệt là con gái."
 
-    "Aoi bất ngờ hỏi tôi:"
-    
-    a "Brandon, năm tới cậu định làm gì?"
+        "Có lẽ tôi chỉ hay suy nghĩ quá nhiều."
 
-    "Câu hỏi của cô ấy khiến tôi bất ngờ. Bởi vì có thể tôi sẽ chuyển trường năm tới."
+        "Rồi một ngày giữa tháng Tư —"
 
-    "Không khí trở nên hơi ngượng ngùng."
+        "Aoi bất ngờ hỏi tôi:"
+        
+        a "Brandon, năm tới cậu định làm gì?"
 
-    "Tôi có nên nói thật không?"
+        "Câu hỏi của cô ấy khiến tôi bất ngờ. Bởi vì có thể tôi sẽ chuyển trường năm tới."
 
-    $ preferences.text_cps = 0
+        "Không khí trở nên hơi ngượng ngùng."
 
-    menu:
         "Tôi có nên nói thật không?"
 
-        "Nên thành thật.":
-            jump saying_vi
+        $ preferences.text_cps = 0
 
-        "Tôi không muốn làm cô ấy buồn...":
-            jump not_saying_vi
+        menu:
+            "Tôi có nên nói thật không?"
+
+            "Nên thành thật.":
+                jump saying_vi
+
+            "Tôi không muốn làm cô ấy buồn...":
+                jump not_saying_vi
 
     label saying_vi:
+
+        stop music fadeout 1.0
+
+        play music ballerina volume 0.6
 
         $ preferences.text_cps = 30
         m "Aoi, có chuyện tôi muốn nói với cậu. Tôi chỉ không biết nó sẽ làm cậu buồn không."
@@ -2504,6 +2709,10 @@ label start:
 
     label not_saying_vi:
 
+        stop music fadeout 1.0
+
+        play music onceupon volume 0.5
+
         $ preferences.text_cps = 30
         m "À, tôi đang định tìm cơ hội thực tập. Vì năm ba là lúc nên bắt đầu sớm."
 
@@ -2552,6 +2761,10 @@ label start:
 
     label start_jp:
 
+        stop music fadeout 1.0
+
+        play music newhome volume 0.6
+
         scene cafe
 
         na_jp "あの女の子の姿は決して忘れられない。たぶん、彼女が僕の冷たい心を再び揺さぶったのだろう。"
@@ -2589,6 +2802,13 @@ label start:
                 jump bad_end_jp
 
     label league_end_jp:
+
+        stop music fadeout 1.0
+
+        play music lol volume 0.5 
+
+        scene sky
+
         $ preferences.text_cps = 30
 
         m_jp "レーン押せ、EZREAL !"
@@ -2612,6 +2832,11 @@ label start:
         return
     
     label good_end_jp:
+
+        stop music fadeout 1.0
+
+        play music wind volume 0.7
+
         $ preferences.text_cps = 30
         na_jp_third "勇気を振り絞って立ち上がり、彼女の方へ歩いた。"
 
@@ -2723,6 +2948,13 @@ label start:
         jump after_cof_jp
 
     label bad_end_jp:
+
+        stop music fadeout 1.0
+
+        play music driftaway volume 0.6
+
+        scene sky
+        
         $ preferences.text_cps = 30
         
         m_jp "そうだ、僕は何を考えているんだ？"
@@ -2741,6 +2973,10 @@ label start:
         return
 
     label after_cof_jp:
+
+        stop music fadeout 1.0
+
+        play music bleached volume 0.6
 
         scene campus
         na_jp "あの会話以来、日々はより楽しく、生き生きとしたものになった。"
@@ -2785,6 +3021,10 @@ label start:
                 jump not_saying_jp
 
     label saying_jp:
+
+        stop music fadeout 1.0
+
+        play music ballerina volume 0.6
 
         $ preferences.text_cps = 30
         m_jp "葵、伝えたいことがある。悲しませるかもしれないけど…"
@@ -2848,6 +3088,10 @@ label start:
         return
 
     label not_saying_jp:
+
+        stop music fadeout 1.0
+
+        play music onceupon volume 0.5
 
         $ preferences.text_cps = 30
         m_jp "僕はインターンシップを探すつもり。三年生は早く始めるべきだから。"
