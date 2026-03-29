@@ -46,8 +46,7 @@ label start:
         "Tiếng Việt":
             jump start_vi
 
-        "Only squares":
-            $ gui.text_font = gui.text_font_jp
+        "日本語":
             jump start_jp
         
 
@@ -2172,21 +2171,21 @@ label start:
 
             "Tất nhiên rồi, đồ ngốc!":
                 menu:
-                    "Cậu chắc chứ? Chưa bao giờ cậu tiếp cận một cô gái trước đây mà."
+                    "Mày chắc chứ? Chưa bao giờ mà mày thực sự tiếp cận một cô gái và nói chuyện với cổ trước giờ luôn á nha."
 
-                    "Vâng! Tôi chắc chắn!":
+                    "Ừ! Tao chắc chắn là tao sẽ làm đưuọc cái gì đó bự lần này!":
                         jump good_end_vi
 
-                    "Thật à, về nhà chơi Liên Minh đi (tôi bét đồng).":
+                    "À vậy à, về nhà chơi Liên Minh luôn (đồng đoàn thẳng tiến).":
                         jump league_end_vi
 
-            "Không đâu, nhìn tôi kìa! Tôi hói và hôi hám :/":
+            "Không đâu, nhìn bản thân của mày kìa! Đúng chất thằng hôi lông :/":
                 jump bad_end_vi
 
     label league_end_vi:
             $ preferences.text_cps = 30
 
-            m "Đẩy sóng đi Ezreal, dễ ẹc!"
+            m "Đẩy wave lính đi Ezreal, dễ ẹc à sao mày ngo thế con!"
 
             "30 phút sau..."
 
@@ -2194,7 +2193,7 @@ label start:
 
             "5 trận sau..."
 
-            m "Chết tiệt... Tôi giờ iron rồi..."
+            m "Chết tiệt... giờ thành sắt đoàn mẹ rồi..."
 
             m "..."
 
@@ -2202,7 +2201,9 @@ label start:
             
             m "..."
 
-            m "Vui hơn hẳn là nói chuyện với cô ta 🔥🔥🔥"
+            m "Bruh tính ra chơi Liên Minh vẫn vui chán."
+
+            m "Vui hơn hẳn là nói chuyện với cô ta, hẹ hẹ hẹ."
 
             return
 
@@ -2226,7 +2227,7 @@ label start:
 
             "Với giọng nhẹ nhàng, hơi khó chịu, cô ấy trả lời:"
 
-            g "Bạn là ai? Tôi nghĩ chúng ta chưa quen nhau?"
+            g "Bạn là ai? Mình nghĩ chúng ta chưa quen biết gì nhau hết á?"
 
             "Chết tiệt..."
             "Tiếp tục một chút."
@@ -2242,29 +2243,31 @@ label start:
 
             m "Ồ!"
 
-            m "Tôi cũng vậy! Tôi là người châu Á. Còn bạn?"
+            m "Tôi cũng vậy!"
 
-            g "Thật sao?? Tôi cũng là người châu Á!"
+            g "Thật sao??"
 
             m "Ni hao fine shyt"
 
             g "..."
 
+            "Bỏ mẹ. Đùa ngo quá. Chết con rồi. AAAAAA."
+
             m "Haha..." 
 
-            m "Xin lỗi, trò đùa tệ quá..."
+            m "Xin lỗi nha, mình nhạt vl..."
 
-            m "Nhân tiện tôi đến từ Việt Nam"
+            m "Nhân tiện mình là người Việt"
 
             g "Tôi là người Nhật"
 
-            m "Không thể tin được!!! Nhưng tôi đang học tiếng Nhật."
+            m "Không thể tin được!!! Nhưng tôi đang học tiếng Nhật á."
 
             g "Hay quá! Và tiến triển thế nào rồi?"
 
             m "Thành thật mà nói, cũng khá tốt nhưng tôi không có ai để luyện cùng."
 
-            m "Này! Bạn có thể giúp tôi không? Luyện tiếng Nhật cùng nhau."
+            m "Này! Bạn có thể giúp tôi không?"
             
             g "Hmm... tôi đang ăn, nên... không phải lúc tốt đâu."
 
