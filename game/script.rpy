@@ -34,7 +34,15 @@ label start:
             jump start_fr
 
         "Deutsch":
-            jump start_ger
+            jump start_german
+
+        "Hànyu":
+            jump start_man
+        
+        "Nihongo":
+            jump start_jp
+        
+
 
     label start_en:
         scene cafe
@@ -70,10 +78,33 @@ label start:
                         jump good_end
 
                     "For real, let's go home and play league (I'm bronze).":
-                        jump bad_end
+                        jump league_end
 
             "Nah bro, look at me! I'm bald and smelly asf :/":
                 jump bad_end
+
+    label league_end:
+        $ preferences.text_cps = 30
+
+        m "PUSH THE WAVE SHIT EZREAL"
+
+        "30 min later..."
+
+        m "GET THE BARON!! SMITE SMITE!"
+
+        "5 matches later..."
+
+        m "Fuck... I'm iron now..."
+
+        m "..."
+
+        m "What happened?"
+        
+        m "..."
+
+        m "That was way better than talking to a girl 🔥🔥🔥"
+
+        return
 
     label good_end:
         $ preferences.text_cps = 30
@@ -398,10 +429,33 @@ label start:
                         jump good_end_pt
 
                     "Ah, melhor ir pra casa jogar League (sou bronze).":
-                        jump bad_end_pt
+                        jump league_end_pt
 
             "Nem ferrando, olha pra mim! Tô careca e fedido :/":
                 jump bad_end_pt
+
+    label league_end_pt:
+        $ preferences.text_cps = 30
+
+        m "EMPURRA A ONDA EZREAL MERDA"
+
+        "30 minutos depois..."
+
+        m "PEGUE O BARÃO!! SMITE SMITE!"
+
+        "5 partidas depois..."
+
+        m "Merda... virei ferro agora..."
+
+        m "..."
+
+        m "O que aconteceu?"
+        
+        m "..."
+        
+        m "Isso foi muito melhor do que conversar com uma garota 🔥🔥🔥"
+
+        return
 
     label good_end_pt:
         $ preferences.text_cps = 30
@@ -728,10 +782,34 @@ label start:
                         jump good_end_es
 
                     "En serio, mejor vamos a casa a jugar League (soy bronce).":
-                        jump bad_end_es
+                        jump league_end_es
 
             "Nah hermano, ¡mírame! Estoy calvo y huelo horrible :/":
                 jump bad_end_es
+
+
+    label league_end_es:
+            $ preferences.text_cps = 30
+
+            m "¡EMPUJA LA OLA EZREAL MIERDA"
+
+            "30 minutos después..."
+
+            m "¡TOMA EL BARÓN!! ¡SMITE SMITE!"
+
+            "5 partidas después..."
+
+            m "Mierda... ahora soy hierro..."
+
+            m "..."
+
+            m "¿Qué pasó?"
+            
+            m "..."
+            
+            m "Eso fue mucho mejor que hablar con una chica 🔥🔥🔥"
+
+            return
 
     label good_end_es:
         $ preferences.text_cps = 30
@@ -1052,10 +1130,33 @@ label start:
                         jump good_end_ita
 
                     "Davvero, torniamo a casa a giocare a League (sono bronzo).":
-                        jump bad_end_ita
+                        jump league_end_ita
 
             "Nah fratello, guardami! Sono calvo e puzzo da morire :/":
                 jump bad_end_ita
+
+    label league_end_ita:
+        $ preferences.text_cps = 30
+
+        m "SPINGI L'ONDA MERDA EZREAL"
+
+        "30 minuti dopo..."
+
+        m "PRENDIAMO IL BARONE!! SMITE SMITE!"
+
+        "Dopo 5 partite..."
+
+        m "Cazzo... ora sono ferro..."
+
+        m "..."
+
+        m "Che è successo?"
+
+        m "..."
+
+        m "È stato molto meglio che parlare con una ragazza 🔥🔥🔥"
+
+    return
 
     label good_end_ita:
         $ preferences.text_cps = 30
@@ -1375,11 +1476,33 @@ label start:
                         jump good_end_fr
 
                     "Sérieusement, rentrons à la maison et jouons à League (je suis bronze).":
-                        jump bad_end_fr
+                        jump league_end_fr
 
             "Non mec, regarde-moi ! Je suis chauve et je pue à mort :/":
                 jump bad_end_fr
 
+    label league_end_fr:
+        $ preferences.text_cps = 30
+
+        m "POUSSE LA VAGUE MERDE EZREAL"
+
+        "30 minutes plus tard..."
+
+        m "PRENONS LE BARON !! SMITE SMITE !"
+
+        "Après 5 parties..."
+
+        m "Merde... je suis maintenant en fer..."
+
+        m "..."
+
+        m "Que s'est-il passé ?"
+
+        m "..."
+
+        m "C'était bien mieux que de parler à une fille 🔥🔥🔥"
+
+    return
     label good_end_fr:
         $ preferences.text_cps = 30
         "Rassemblant tout mon courage, je me levai et m'avançai vers elle."
@@ -1664,6 +1787,1050 @@ label start:
         "Finalement, il eut une amie japonaise. Mais ce fut doux-amer car il n'avait pas été honnête."
 
         return
+
+
+
+    label start_german:
+            
+        scene cafe
+
+        "Ich werde das Bild dieses Mädchens nie vergessen. Diejenige, die vielleicht mein kaltes Herz noch einmal zum Beben gebracht hat."
+
+        "Aber es scheint, dass die poetischen Szenen, von denen ich träumte, niemals Wirklichkeit werden."
+
+        "Alles, was ich tun kann, ist, von weitem zuzusehen, unfähig, etwas zu unternehmen."
+
+        "„Es ist nicht möglich.“ „Wir kennen uns doch gar nicht – wie könntest du mit ihr sprechen?“"
+
+        "Diese Stimmen hallten immer wieder in meinem Kopf wider. Ich wusste wirklich nicht mehr, was ich tun sollte."
+
+        "Heute ist wie jeder andere Tag. Dieselbe vertraute Cafeteria, derselbe vertraute Platz. Sie sitzt wieder dort. Und ich, wie immer, nur zuschauend aus der Ferne."
+
+        "Mein letztes Jahr hier, bevor ich irgendwohin ganz anders wechsle."
+
+        "AAAAA! Das könnte dieser „Moment“ sein – wenn der Junge und das Mädchen zufällig aufeinandertreffen. Schade, dass ich nur eine Nebenfigur bin."
+
+        "Verdammt. Soll ich auf sie zugehen?"
+        $ preferences.text_cps = 0
+        menu:
+            "Verdammt. Soll ich auf sie zugehen?" 
+
+            "Natürlich, du Trottel!":
+                menu:
+                    "Bist du sicher? Du hast noch nie ein Mädchen angesprochen."
+
+                    "Ja! Ich bin sicher!":
+                        jump good_end_german
+
+                    "Echt, lass uns nach Hause gehen und League spielen (ich bin Bronze).":
+                        jump league_end_german
+
+            "Nee Mann, schau mich an! Ich bin kahl und stinkig :/":
+                jump bad_end_german
+
+    label league_end_german:
+        $ preferences.text_cps = 30
+
+        m "SCHIEB DIE WELLE VERDAMMT EZREAL"
+
+        "30 Minuten später..."
+
+        m "HOLT DEN BARON!! SMITE SMITE!"
+
+        "Nach 5 Spielen..."
+
+        m "Scheiße... ich bin jetzt Eisen..."
+
+        m "..."
+
+        m "Was ist passiert?"
+
+        m "..."
+
+        m "Das war viel besser als mit einem Mädchen zu reden 🔥🔥🔥"
+
+        return
+
+    label good_end_german:
+        $ preferences.text_cps = 30
+        "Mit all meinem Mut stand ich auf und ging auf sie zu."
+
+        "Ich habe das Gefühl, nur zuzusehen und nichts zu tun, lange genug ertragen. Jetzt, weg mit dieser Verlegenheit."
+
+        "Als ich näher kam, fühlte sich mein Herzschlag wie verdreifacht an. Nervosität und eine Flut nicht so guter Erinnerungen an frühere Gespräche mit Mädchen stürzten auf mich ein wie ein Tsunami."
+
+        "Egal, alles oder nichts, sagte ich mir."
+
+        m "Hey... entschuldige."
+
+        "Ich zwang die Worte heraus."
+
+        "Sie sah mich an. Oh! Es fühlte sich an, als könnte ich einfach… hier sterben und aufsteigen."
+
+        "Oder zumindest dachte ich das. Vielleicht ist es ein bisschen seltsam, sie zu stören, während sie isst?"
+
+        "In einem sehr sanften, leicht genervten Ton antwortete sie:"
+
+        g "Wer bist du? Ich glaube, wir kennen uns nicht?"
+
+        "Verdammt..."
+        "Lass uns ein bisschen weiter gehen."
+
+        m "Nun, ich habe dich ein paar Mal gesehen. Ich finde dich süß! Also..."
+
+        "Scheiße..." 
+        "Was soll ich fragen? Ich muss das Gespräch am Laufen halten..."
+
+        m "Bist du Amerikanerin?"
+
+        g "Nein, eigentlich bin ich internationale Studentin."
+
+        m "Oh!"
+
+        m "Ich auch! Ich bin asiatisch. Und du?"
+
+        g "Echt?? Ich bin auch asiatisch!"
+
+        m "Ni hao, fine shyt"
+
+        g "..."
+
+        m "Haha..." 
+
+        m "Mein Fehler, schlechter Witz..."
+
+        m "Übrigens, ich komme aus Vietnam"
+
+        g "Ich bin Japanerin"
+
+        m "Nein waaay!!! Du wirst es nicht glauben, aber ich lerne Japanisch."
+
+        g "Das ist schön! Und wie läuft es?"
+
+        m "Ehrlich gesagt, ganz gut, aber ich habe niemanden zum Üben."
+
+        m "Hey! Kannst du mir helfen? Beim Japanisch üben."
+
+        g "Hmm... Ich esse gerade, also... ist gerade keine gute Zeit, weißt du?"
+
+        m "Oh... ich will dich nicht stören... Entschuldigung."
+
+        m "Na ja... schön, dich kennenzulernen."
+
+        "Ich drehte mich zurück zu meinem üblichen Tisch."
+
+        "Aber bevor ich mich setzen konnte, sagte sie:"
+
+        g "Warte!! Es ist nicht eklig, dass sich ein Ausländer für meine Sprache interessiert. Ich helfe dir. Benutzt du Social Media? IG? Line?"
+
+        m "Oh, ich habe Line, habe es aber nie wirklich benutzt. In den USA benutzt sowieso niemand Line. Ich habe auch IG. Dann nehmen wir IG."
+
+        g "Ok ok."
+
+        m "Ahh... Scheiße..."
+
+        g "Was?"
+
+        m "Mein Handy ist gerade ausgegangen..."
+
+        g "Hahaha, ist schon ok!"
+
+        g "Gib mir deinen Usernamen, ich folge dir."
+
+        "Sie gab mir ihr iPhone und tippte meinen IG-Account sehr schnell ein."
+
+        m "Alles klar, hier ist mein IG."
+
+        g "Okay. Hast du die Anfrage geschickt?"
+
+        m "Ja! Vielen Dank. Ich lade mein Handy so schnell wie möglich auf."
+
+        g "Haha, kein Problem."
+
+        m "Ich lasse dich dein Mittagessen beenden. Ich muss zum Unterricht. Bis später."
+
+        g "Ja! Bis dann!"
+
+        m "Oh, ich habe vergessen zu sagen, mein Name ist Brandon!"
+
+        g "Hahaha, mein Name ist Aoi!"
+
+        m "Schön, dich kennenzulernen, Aoi!"
+
+        a "Schön, dich auch kennenzulernen!"
+
+        "Den ganzen Nachmittag fühlte sich mein Kopf an, als würde er explodieren. Ich hab es geschafft. Unglaublich."
+        "Mann, meine Beine zittern."
+
+        jump after_cof_german
+
+    label bad_end_german:
+        $ preferences.text_cps = 30
+        
+        m "Ja, was denke ich mir nur?"
+        m "Ich habe sie vorher nicht angesprochen, und heute wird es nicht anders sein..."
+
+        "Und so sah ich weiter aus der Ferne zu. März, April, dann Mai vergingen."
+
+        "Das Ende meines zweiten Jahres rückte näher."
+
+        "Ich wechselte zu einer neuen Universität, mit einem unbeschreiblichen Gefühl der Traurigkeit."
+
+        "Vielleicht war ich einfach zu feige. Ich gab mir selbst die Schuld."
+
+        "Was für ein Bedauern."
+
+        return
+
+    label after_cof_german:
+
+        scene campus
+        "Seit diesem Gespräch wurden meine Tage glücklicher und lebendiger."
+
+        "Gleichzeitig konnte ich nun problemlos Gespräche mit ihr beginnen, ohne Angst zu haben, wie zuvor ekelhaft wahrgenommen zu werden."
+
+        "Wann immer ich zur Cafeteria ging, hoffte ich immer, dass sie an ihrem üblichen Platz am Fenster sitzen würde."
+
+        "Dann unterhielten wir uns über Dinge, die wir tagsüber erlebt hatten."
+
+        "Anfangs waren die Themen etwas trocken. Aber nach und nach kamen interessantere Dinge auf."
+
+        "Wenn ich darüber nachdenke..."
+
+        "Es ist tatsächlich ziemlich interessant, dass ich mit einer Japanerin befreundet bin."
+
+        "Ich dachte immer, jemand wie ich – ein Vietnamese – hätte es schwer, einem japanischen Mädchen näherzukommen."
+
+        "Vielleicht neige ich einfach dazu, zu viel nachzudenken."
+
+        "Dann, eines Tages Mitte April—"
+
+        "Fragte Aoi mich plötzlich:"
+
+        a "Brandon, was hast du nächstes Jahr vor?"
+
+        "Ihre Frage überraschte mich, da ich vielleicht nächstes Jahr wechseln würde."
+
+        "Die Atmosphäre wurde etwas unangenehm."
+
+        "Soll ich es ihr sagen?"
+
+        $ preferences.text_cps = 0
+
+        menu:
+            "Soll ich es ihr sagen?"
+
+            "Besser ehrlich sein.":
+                jump saying_german
+
+            "Ich will ihre Gefühle nicht verletzen...":
+                jump not_saying_german
+
+    label saying_german:
+
+        $ preferences.text_cps = 30
+        m "Aoi, es gibt etwas, das ich dir sagen möchte. Ich weiß nur nicht, ob es dich traurig macht."
+
+        a "Hmm? Sag es ruhig. Es sollte in Ordnung sein."
+
+        "Ich fühlte mich nervös, aber sprach trotzdem weiter. Ich dachte, es wäre besser, ehrlich zu sein."
+
+        m "Leider werde ich nächstes Jahr nicht hier sein. Ich werde zu einer Universität in einem anderen Bundesstaat wechseln."
+
+        a "Warte, warum wechseln? Ich denke, diese Schule ist nicht so schlecht."
+
+        "Aoi sah dabei etwas traurig aus."
+
+        m "Natürlich ist sie nicht schlecht! Aber weißt du... Ich bekam dort ein besseres Stipendium, also konnte ich nicht ablehnen..."
+
+        a "Das ist schade... Es wäre schön gewesen, wenn du geblieben wärst und wir uns weiterhin so treffen könnten..."
+
+        a "Aber HEYYY!!! HERZLICHEN GLÜCKWUNSCH!!! DAS IST WIRKLICH GUT!!!"
+
+        m "Vielen Dank!!"
+
+        a "..."
+
+        m "..."
+
+        a "Hey, wir können die Zeit, die wir noch haben, genießen, solange du noch hier bist, okay?"
+
+        m "Ja, natürlich! Wir haben viel Zeit!"
+
+        "Nach diesem Gespräch, obwohl Aoi sich manchmal etwas traurig fühlte, wuchsen wir tatsächlich näher zusammen."
+
+        "Schließlich kam das Unvermeidliche. Die Abschlussprüfungen bestanden. Das zweite Jahr endete. Und ich musste gehen."
+
+        scene airport
+
+        "Am Tag der Abreise schrieb sie mir:"
+
+        a "Also, heute ist der Tag, an dem du gehst, richtig?"
+
+        m "Ja..."
+
+        a "Schade, dass ich mich nicht persönlich verabschieden kann. Ich bin gerade in Japan. 😭😭"
+
+        m "Haha, ist schon okay. Aber ich werde dich vermissen. Ich werde dir definitiv von meiner neuen Schule erzählen, wenn ich dort ankomme!"
+
+        a "Ja! Vergiss nicht mir zu schreiben. Wenn du es vergisst, bringe ich dich um!."
+
+        m "Ich würde dich nie vergessen, Dummkopf!"
+
+        a "Du besser nicht! Hmpf 😤"
+
+        m "Ahaha, bis später, Aoi!"
+
+        a "Bis dann! Tschüss"
+
+        "Der Hauptcharakter zog an eine neue Universität. Auch wenn die Entfernung zwischen ihnen wuchs, blieben sie in Kontakt."
+
+        "Aoi und der Hauptcharakter wurden mit der Zeit enger. Wer weiß – vielleicht erwartet sie eine strahlende Zukunft."
+
+        return
+
+    label not_saying_german:
+
+        $ preferences.text_cps = 30
+        m "Nun, ich plane, nach Praktikumsmöglichkeiten zu suchen. Im dritten Jahr sollte man früh anfangen."
+
+        a "Oh, verstehe."
+
+        m "Und du?"
+
+        a "Ich bin mir noch nicht sicher. Nächstes Jahr wird mein zweites Jahr sein, also wahrscheinlich dasselbe wie dieses Jahr."
+
+        m "Planst du nach dem Abschluss nach Japan zurückzukehren?"
+
+        a "Ich bin mir noch nicht sicher, ob ich zurück will oder hier bleiben..."
+
+        m "Ja... schwer zu entscheiden."
+
+        "Die Abschlussprüfungen kamen, und ich ging, ohne dass Aoi es wusste."
+
+        a "Wo bist du? Ich habe dich überhaupt nicht gesehen. Das neue Schuljahr beginnt bald. 😢😢😢"
+
+        m "Aoi… du wirst mir nicht böse sein für das, was ich jetzt sage, oder?"
+
+        a "Hmm? Sag ruhig, ich werde nicht böse sein."
+
+        m "Eigentlich… ich habe die Schule gewechselt. Tut mir leid, dass ich es dir nicht gesagt habe."
+
+        m "Ich wollte deine Gefühle nicht verletzen."
+
+        "Aoi machte eine kurze Pause, bevor sie antwortete."
+
+        a "Ah haha… es ist okay. Wir können trotzdem in Kontakt bleiben. Nur nicht persönlich…"
+
+        m "Du bist wirklich nicht traurig?"
+
+        a "Ein bisschen, aber weißt du... es ist dein Leben, und wenn es dich glücklich macht, bin ich auch glücklich!"
+
+        m "Ohh danke!! Ich hatte nur Angst, dich traurig zu machen. Es tut mir wirklich leid. 😭😭😭"
+
+        "Aber in Wirklichkeit war Aoi sehr traurig, dass er nicht ehrlich zu ihr war."
+
+        "Auch wenn sie in Kontakt blieben, konnte ihre Nähe aufgrund der Entfernung nie weiter wachsen."
+
+        "Am Ende gewann er eine japanische Freundin. Aber es fühlte sich bittersüß an, weil er nicht ehrlich war."
+
+        return
+
+    label start_man:
+
+        $ gui.text_font = chinese_japanese_font
+
+        scene cafe
+
+        "我永远不会忘记那个女孩的身影。也许正是她，让我那颗冷漠的心再次颤动。"
+
+        "但看来我梦里的诗意场景永远不会变为现实。"
+
+        "我所能做的，只是站在远处看着她，无能为力。"
+
+        "“不可能。” “我们甚至不认识——你怎么可能跟她说话？”"
+
+        "这些声音在我脑海里回响。我真的不知道该怎么办了。"
+
+        "今天像往常一样。熟悉的自助餐厅，熟悉的座位。她又坐在那里。而我，像往常一样，只能远远地看着。"
+
+        "这是我在转学前的最后一年。"
+
+        "啊啊啊！这可能就是那个“瞬间”——男孩和女孩意外相遇的瞬间。可惜我只是一个配角。"
+
+        "该死。我应该上前吗？"
+        $ preferences.text_cps = 0
+        menu:
+            "该死。我应该上前吗？" 
+
+            "当然，笨蛋！":
+                menu:
+                    "你确定吗？你以前从没跟女孩搭讪过。"
+
+                    "是的！我确定！":
+                        jump good_end_man
+
+                    "真的？那我们回家玩英雄联盟吧（我青铜）。":
+                        jump league_end_man
+
+            "不行，看我！我又秃又臭 :/":
+                jump bad_end
+
+    label league_end_man:
+        $ preferences.text_cps = 30
+
+        m "推动兵线，EZREAL！"
+
+        "30分钟后…"
+
+        m "打巴龙！！SMITE SMITE！"
+
+        "5局后…"
+
+        m "操…我现在是铁牌了…"
+
+        m "…"
+
+        m "发生了什么？"
+
+        m "…"
+
+        m "这比和女孩聊天好太多了 🔥🔥🔥"
+
+        return
+
+    label good_end_man:
+        $ preferences.text_cps = 30
+        "鼓起所有勇气，我站起身，走向她。"
+
+        "我忍受了太久只能远远观看而不做任何事情。现在，把这份羞涩抛开吧。"
+
+        "当我靠近时，我的心跳仿佛加速了三倍。紧张和过去与女孩交谈的不好回忆如海啸般涌来。"
+
+        "没关系，拼一把，我对自己说。"
+
+        m "嘿...打扰一下。"
+
+        "我强迫自己说出了这句话。"
+
+        "她抬头看着我。天啊！我感觉我可以就此死去升天。"
+
+        "至少我是这么想的。或许在她吃饭时打扰她有点奇怪？"
+
+        "她以非常温柔、稍微有些不耐烦的语气回答："
+
+        g "你是谁？我觉得我们不认识吧？"
+
+        "该死..."
+        "再试一次吧。"
+
+        m "嗯，我之前见过你几次。我觉得你很可爱！所以..."
+
+        "操..." 
+        "我该问什么？我得维持谈话啊..."
+
+        m "你是美国人吗？"
+
+        g "不是，其实我是国际学生。"
+
+        m "哦！"
+
+        m "我也是！我是亚洲人，你呢？"
+
+        g "真的吗？？我也是亚洲人！"
+
+        m "你好，fine shyt"
+
+        g "..."
+
+        m "哈哈..." 
+
+        m "不好意思，烂笑话..."
+
+        m "顺便说一下，我来自越南"
+
+        g "我是日本人"
+
+        m "不可能！！！你不会相信，我在学日语。"
+
+        g "太好了！那进展如何？"
+
+        m "说实话，还不错，但没人陪我练习。"
+
+        m "嘿！你能帮我练日语吗？"
+
+        g "嗯…我现在在吃饭，所以…现在不是好时机，你懂吧？"
+
+        m "哦…我不想打扰你…抱歉。"
+
+        m "嗯…很高兴认识你。"
+
+        "我转回自己的座位。"
+
+        "但在我坐下之前，她说："
+
+        g "等等！！外国人对我的语言感兴趣并不恶心。我会帮你。你用社交软件吗？IG？Line？"
+
+        m "哦，我有Line，只是几乎没用过。在美国没人用Line。我也有IG，那就用IG吧。"
+
+        g "好的好的。"
+
+        m "啊…糟糕..."
+
+        g "什么事？"
+
+        m "我手机没电了…"
+
+        g "哈哈没事！"
+
+        g "给我你的用户名，我加你。"
+
+        "她把她的iPhone给我，快速输入了我的IG账号。"
+
+        m "好吧，这是我的IG。"
+
+        g "好。你发了关注请求吗？"
+
+        m "发了！谢谢你。我会尽快给手机充电。"
+
+        g "哈哈，不客气。"
+
+        m "我让你先吃完午餐，我得去上课。回头见。"
+
+        g "嗯！回头见！"
+
+        m "哦，我忘了说，我叫Brandon！"
+
+        g "哈哈，我叫Aoi！"
+
+        m "很高兴认识你，Aoi！"
+
+        a "我也很高兴认识你！"
+
+        "整个下午，我感觉脑子快炸了。我成功了。太棒了。"
+        "我的腿都在发抖。"
+
+        jump after_cof
+
+    label bad_end_man:
+        $ preferences.text_cps = 30
+        
+        m "是啊，我在想什么呢？"
+        m "以前没上前，今天也不会例外…"
+
+        "就这样，我一直远远看着。三月、四月，然后五月过去了。"
+
+        "第二学年的尽头来临。"
+
+        "我转学到一所新大学，带着难以形容的悲伤。"
+
+        "也许我太胆小。我一直责怪自己。"
+
+        "真让人后悔。"
+
+        return
+
+    label after_cof_man:
+
+        scene campus
+        "自从那次谈话后，我的日子变得更快乐，更生动。"
+
+        "同时，我可以自如地和她聊天，不再像以前那样害怕被觉得恶心。"
+
+        "每次走向自助餐厅时，我总希望她坐在常坐的窗边。"
+
+        "然后我们聊白天发生的事情。"
+
+        "起初话题有些枯燥，但慢慢地，出现了更有趣的内容。"
+
+        "想想看…"
+
+        "我竟然和日本人成了朋友，真是有趣。"
+
+        "我一直以为像我这样的越南人，很难接近日本人，尤其是女孩。"
+
+        "也许我只是想太多了。"
+
+        "然后，有一天四月中旬——"
+
+        "Aoi突然问我："
+
+        a "Brandon，你明年打算做什么？"
+
+        "她的问题让我有些意外，因为我可能明年要转学。"
+
+        "气氛有些尴尬。"
+
+        "我应该告诉她吗？"
+
+        $ preferences.text_cps = 0
+
+        menu:
+            "我应该告诉她吗？"
+
+            "最好坦诚。":
+                jump saying_man
+
+            "我不想伤她的感情…":
+                jump not_saying_man
+
+    label saying_man:
+
+        $ preferences.text_cps = 30
+        m "Aoi，有件事我想告诉你。我只是担心会让你难过。"
+
+        a "嗯？说吧。应该没问题。"
+
+        "我紧张，但还是继续说。我觉得诚实会更好。"
+
+        m "很遗憾，明年我不会在这里。我会转学到另一州的大学。"
+
+        a "等等，为什么要转？我觉得这学校不差啊。"
+
+        "Aoi说话时看起来有些难过。"
+
+        m "当然不差！但你知道…我拿到了更好的奖学金，所以不能拒绝…"
+
+        a "太可惜了…如果你留下，我们可以继续这样见面就好了…"
+
+        a "但是嘿！！！恭喜！！！太棒了！！！"
+
+        m "谢谢你！！"
+
+        a "..."
+
+        m "..."
+
+        a "嘿，我们还可以好好享受剩下的时间，好吗？"
+
+        m "当然！我们还有很多时间！"
+
+        "那次谈话之后，虽然Aoi有时会有些伤心，但我们真的变得更亲近了。"
+
+        "最终，不可避免的事情发生了。期末考试结束，第二学年结束，我必须离开。"
+
+        scene airport
+
+        "离别当天，她给我发消息："
+
+        a "今天是你离开的日子，对吧？"
+
+        m "是的…"
+
+        a "真遗憾我不能当面说再见。我现在在日本 😭😭"
+
+        m "哈哈，没关系。但我会想你的。我到那边会告诉你我的新学校！"
+
+        a "好！别忘了给我发信息。如果你忘了，我要杀你！"
+
+        m "我永远不会忘记你，笨蛋！"
+
+        a "你最好别忘！哼 😤"
+
+        m "哈哈，回头见，Aoi！"
+
+        a "回头见！拜拜"
+
+        "主角搬到新大学。即使距离拉开，他们仍保持联系。"
+
+        "随着时间推移，Aoi和主角更亲近。谁知道——也许光明的未来在等着他们。"
+
+        return
+
+    label not_saying_man:
+
+        $ preferences.text_cps = 30
+        m "嗯，我打算找实习机会。因为三年级应该早点开始。"
+
+        a "哦，我明白了。"
+
+        m "你呢？"
+
+        a "我还不确定。明年是我的二年级，所以可能和今年差不多。"
+
+        m "毕业后你打算回日本吗？"
+
+        a "我还不确定是回去还是留在这里…"
+
+        m "是啊…很难选择。"
+
+        "期末考试来了，我离开了，Aoi完全不知道。"
+
+        a "你在哪？我一点都没见到你。新学年快开始了 😢😢😢"
+
+        m "Aoi…你不会因为我要说的事生气吧？"
+
+        a "嗯？说吧，我不会生气。"
+
+        m "其实…我转学了。抱歉没告诉你。"
+
+        m "我不想伤害你的感情。"
+
+        "Aoi停顿了一下才回答。"
+
+        a "啊哈哈…没关系。我们仍然可以保持联系，只是不能面对面…"
+
+        m "你真的不难过吗？"
+
+        a "有点，但你知道…这是你的生活，如果让你开心，我也开心！"
+
+        m "哦谢谢！！我只是怕让你难过。我真的很抱歉 😭😭😭"
+
+        "但实际上，Aoi因为他不诚实而非常伤心。"
+
+        "虽然保持联系，但由于距离，他们的亲近永远无法进一步加深。"
+
+        "最终，他确实交到了一位日本朋友。但因为不诚实，这感觉有些苦涩。"
+
+        return
+
+
+    label start_jp:
+
+        scene cafe
+
+        "あの女の子の姿は決して忘れられない。たぶん、彼女が僕の冷たい心を再び揺さぶったのだろう。"
+
+        "でも、僕が夢見た詩的なシーンは現実になることはなさそうだ。"
+
+        "僕にできることは、遠くから見つめることだけで、何もできない。"
+
+        "「無理だ」「お互い知らないのに、どうやって話せる？」"
+
+        "その声が頭の中で響き続け、僕はもうどうしたらいいのか分からなかった。"
+
+        "今日もいつもと同じ日。馴染みのカフェテリア、馴染みの席。彼女はまたそこに座っている。そして僕は、いつものように遠くから見ているだけ。"
+
+        "転校する前の最後の一年だ。"
+
+        "あああ！これが「瞬間」かもしれない——少年と少女が偶然出会う瞬間。でも僕はただの脇役。"
+
+        "くそ。声をかけるべきか？"
+        $ preferences.text_cps = 0
+        menu:
+            "くそ。声をかけるべきか？" 
+
+            "もちろん、バカ！":
+                menu:
+                    "本気か？今まで女の子に話しかけたことないだろう。"
+
+                    "うん！本気だ！":
+                        jump good_end_jp
+
+                    "マジか、じゃあ家に帰ってリーグやろう（俺ブロンズ）。":
+                        jump league_end_jp
+
+            "無理、俺見て！ハゲで臭い :/":
+                jump bad_end_jp
+
+    label league_end_jp:
+        $ preferences.text_cps = 30
+
+        m "レーン押せ、EZREAL！"
+
+        "30分後…"
+
+        m "バロン行け！！スマイトスマイト！"
+
+        "5試合後…"
+
+        m "くそ…俺、アイアンになった…"
+
+        m "…"
+
+        m "何が起きた？"
+
+        m "…"
+
+        m "女の子と話すよりずっと良かった 🔥🔥🔥"
+
+        return
+    
+    label good_end_jp:
+        $ preferences.text_cps = 30
+        "勇気を振り絞って立ち上がり、彼女の方へ歩いた。"
+
+        "何もせず見ているだけの時間が長すぎた。今こそ恥ずかしさを振り払う時だ。"
+
+        "近づくにつれ、心拍数は三倍になった。緊張と、過去の女の子との会話のあまり良くない記憶が津波のように押し寄せてきた。"
+
+        "まあとにかく、全部かけるしかない、と自分に言い聞かせた。"
+
+        m "えっと…すみません。"
+
+        "言葉を無理やり絞り出した。"
+
+        "彼女は顔を上げた。ああ！その場で死んで天に昇れる気分だった。"
+
+        "少なくともそう思った。食事中に声をかけるのは少し変かも？"
+
+        "彼女はとても優しく、少し困った様子で答えた："
+
+        g "あなたは誰ですか？私たちは知らないと思うけど？"
+
+        "くそ..."
+        "もう少し踏み込もう。"
+
+        m "えっと、何回か見かけたことがあります。可愛いと思いました！だから…"
+
+        "くそ…" 
+        "何を聞こう？会話を続けなきゃ…"
+
+        m "アメリカ人ですか？"
+
+        g "いいえ、実は私は留学生です。"
+
+        m "ああ！"
+
+        m "僕も！アジア人です。あなたは？"
+
+        g "本当？？私もアジア人！"
+
+        m "こんにちは、fine shyt"
+
+        g "…"
+
+        m "はは…"
+
+        m "ごめん、くだらない冗談…"
+
+        m "ちなみに僕はベトナム出身です。"
+
+        g "私は日本人です。"
+
+        m "ええ！？信じられない！実は日本語を勉強しているんです。"
+
+        g "素敵！進み具合はどうですか？"
+
+        m "正直まあまあだけど、練習する相手がいなくて。"
+
+        m "ねえ！手伝ってくれませんか？日本語の練習。"
+
+        g "うーん…今食事中だから…いいタイミングじゃないかも。"
+
+        m "あ…邪魔したくない…ごめん。"
+
+        m "では…よろしくお願いします。"
+
+        "席に戻ろうとしたが、彼女は言った："
+
+        g "待って！！外国人が私の言語に興味を持つのは別に変じゃないよ。手伝うね。SNS使う？IG？Line？"
+
+        m "ああ、Lineはあるけどほとんど使ってない。アメリカでは誰もLine使わないし。IGもあるから、IGで。"
+
+        g "オッケーオッケー。"
+
+        m "ああ…しまった…"
+
+        g "どうしたの？"
+
+        m "スマホが切れた…"
+
+        g "はは、大丈夫！"
+
+        g "ユーザー名教えて、フォローするね。"
+
+        "彼女はiPhoneを渡して、私のIGをすぐに入力した。"
+
+        m "よし、これが僕のIG。"
+
+        g "オッケー。フォローリクエスト送った？"
+
+        m "送った！ありがとう。すぐに充電するよ。"
+
+        g "はは、大丈夫。"
+
+        m "じゃあ先にランチを楽しんでね。授業に行くから。またね。"
+
+        g "うん！またね！"
+
+        m "あ、自己紹介忘れたけど、僕はブランドン！"
+
+        g "はは、私は葵！"
+
+        m "よろしく、葵！"
+
+        a "こちらこそ！"
+
+        "その午後、頭が爆発しそうだった。やった。すごい。"
+        "足が震えてる。"
+
+        jump after_cof_jp
+
+    label bad_end_jp:
+        $ preferences.text_cps = 30
+        
+        m "そうだ、僕は何を考えているんだ？"
+        m "以前も声をかけなかったし、今日も同じだ…"
+
+        "そして、ただ遠くから見つめ続けた。3月、4月、そして5月が過ぎた。"
+
+        "二年目の終わりが近づいた。"
+
+        "新しい大学に転校し、言葉にできない悲しみを抱えた。"
+
+        "多分、僕は臆病すぎた。自分を責め続けた。"
+
+        "後悔だ。"
+
+        return
+
+    label after_cof_jp:
+
+        scene campus
+        "あの会話以来、日々はより楽しく、生き生きとしたものになった。"
+
+        "同時に、以前のように気持ち悪いと思われるのを恐れず、彼女と気楽に会話できるようになった。"
+
+        "カフェテリアに歩くたびに、いつも彼女がいつもの窓際に座っていることを願った。"
+
+        "そして、その日の出来事について話した。"
+
+        "最初は話題が少し退屈だった。しかし徐々に、より面白い話題が出てきた。"
+
+        "考えてみると…"
+
+        "日本人の友達ができるなんて、なかなか面白い。"
+
+        "僕のようなベトナム人が日本人、特に女の子と仲良くなるのは難しいと思っていた。"
+
+        "多分、考えすぎなんだろう。"
+
+        "そして、4月中旬のある日——"
+
+        "葵が突然聞いてきた："
+
+        a "ブランドン、来年は何をするつもり？"
+
+        "その質問に驚いた。来年、転校するかもしれなかったから。"
+
+        "雰囲気が少し気まずくなった。"
+
+        "言うべきか？"
+
+        $ preferences.text_cps = 0
+
+        menu:
+            "言うべきか？"
+
+            "正直に話すべき。":
+                jump saying_jp
+
+            "気持ちを傷つけたくない…":
+                jump not_saying_jp
+
+    label saying_jp:
+
+        $ preferences.text_cps = 30
+        m "葵、伝えたいことがある。悲しませるかもしれないけど…"
+
+        a "ん？話して。大丈夫だと思う。"
+
+        "緊張したが、続けた。正直に話す方がいいと思った。"
+
+        m "残念だけど、来年ここにはいない。別の州の大学に転校する。"
+
+        a "えっ、なんで転校？この学校悪くないと思うけど。"
+
+        "葵は少し悲しそうだった。"
+
+        m "もちろん悪くない！でも…もっと良い奨学金をもらったから断れなかったんだ…"
+
+        a "残念…もし残っていたら、こうして会い続けられたのに…"
+
+        a "でもヘイ！！！おめでとう！！！すごい！！！"
+
+        m "ありがとう！！"
+
+        a "…"
+
+        m "…"
+
+        a "残りの時間を楽しもう、いい？"
+
+        m "もちろん！まだたくさん時間がある！"
+
+        "その会話の後、葵は少し悲しんだ時もあったが、二人は確実に親しくなった。"
+
+        "そして避けられない出来事が起きた。期末試験が終わり、二年目が終わり、僕は去らなければならなかった。"
+
+        scene airport
+
+        "出発の日、彼女がメッセージを送ってきた："
+
+        a "今日が出発の日だよね？"
+
+        m "うん…"
+
+        a "直接お別れできなくて残念。今日本にいる 😭😭"
+
+        m "はは、大丈夫。でも寂しくなるよ。着いたら新しい学校のこと教える！"
+
+        a "うん！忘れずにメッセージしてね。忘れたら殺すよ！"
+
+        m "絶対忘れないよ、バカ！"
+
+        a "忘れちゃダメだよ！ふん 😤"
+
+        m "はは、じゃあまたね、葵！"
+
+        a "またね！バイバイ"
+
+        "主人公は新しい大学に移った。距離が離れても連絡は続いた。"
+
+        "時間が経つにつれ、葵と主人公はより親しくなった。もしかすると、明るい未来が待っているかもしれない。"
+
+        return
+
+    label not_saying_jp:
+
+        $ preferences.text_cps = 30
+        m "僕はインターンシップを探すつもり。三年生は早く始めるべきだから。"
+
+        a "ああ、なるほど。"
+
+        m "君は？"
+
+        a "まだ分からない。来年は二年生だから、多分今年と同じかな。"
+
+        m "卒業後は日本に戻る予定？"
+
+        a "戻るか、ここに残るかまだ決めてない…"
+
+        m "うん…選ぶのは難しいね。"
+
+        "期末試験が来て、僕は葵に知られることなく去った。"
+
+        a "どこ？全然会わなかった。新学期が始まる 😢😢😢"
+
+        m "葵…僕が言おうとしていることで怒らないよね？"
+
+        a "ん？話して。怒らない。"
+
+        m "実は…転校したんだ。言わなくてごめん。"
+
+        m "君を悲しませたくなかった。"
+
+        "葵は少し間を置いて答えた。"
+
+        a "あはは…大丈夫。連絡は続けられる。ただ、会えないけど…"
+
+        m "本当に悲しくないの？"
+
+        a "少しはあるけど…でも君の人生だから、君が幸せなら私も幸せ！"
+
+        m "ありがとう！！悲しませるかと思って心配だった。本当にごめん 😭😭😭"
+
+        "でも実際、葵は彼が正直でなかったことにとても悲しんでいた。"
+
+        "連絡は続いたが、距離のせいで親密さはこれ以上深まらなかった。"
+
+        "結局、日本人の友達はできた。でも正直でなかったため、甘く切ない感じだった。"
+ 
+        $ gui.text_font = gui_text_font_backup
+        return
+
+
         # This shows a character sprite. A placeholder is used, but you can
         # replace it by adding a file named "eileen happy.png" to the images
         # directory.
