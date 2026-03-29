@@ -2138,8 +2138,6 @@ label start:
 
     label start_man:
 
-        $ gui.text_font = chinese_japanese_font
-
         scene cafe
 
         "我永远不会忘记那个女孩的身影。也许正是她，让我那颗冷漠的心再次颤动。"
