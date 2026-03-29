@@ -18,6 +18,8 @@ define na_jp_third = Character("", what_font="NotoSansJP.ttf")
 image m normal   = "assets/character_sprite/main-normal.png"
 image m sad   = "assets/character_sprite/main-sad.png"
 image m happy   = "assets/character_sprite/main-happy.png"
+image m emba   = "assets/character_sprite/main-emba.png"
+image m confuse   = "assets/character_sprite/main-confuse.png"
 
 
 
@@ -95,13 +97,13 @@ label start:
         "“It's not possible.” “We don't even know each other—how could you talk to her?”"
         show m sad at left
         "Those voices kept echoing in my mind. I truly didn't know what to do anymore."
-
+        hide m sad
         "Today is like every other day. The same familiar cafeteria, the same familiar seat. She's sitting there again. And me, as always, just watching from afar."
-
+        show m emba at left
         "My final year here before transferring somewhere completely different."
-
+        hide m emba
         "AAAAA! This could be that “moment”—when the boy and girl leads accidentally meet. Too bad I'm just a side character."
-
+        show m confuse at left
         "Damn it. Should I approach her?"
 
         $ preferences.text_cps = 0
