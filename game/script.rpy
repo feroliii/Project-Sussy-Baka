@@ -558,6 +558,8 @@ label start:
 
         scene sky
 
+        hide m normal
+
         $ preferences.text_cps = 30
 
         m "EMPURRA A ONDA EZREAL MERDA"
@@ -597,6 +599,8 @@ label start:
 
         "Tanto faz, é tudo ou nada, eu disse pra mim mesmo."
 
+        show m confuse at left
+
         m "Oi... com licença."
 
         "Eu forcei as palavras a saírem."
@@ -611,7 +615,8 @@ label start:
 
         "Droga..."
         "Vamos insistir um pouco mais."
-
+        hide m confuse
+        show m emba at left
         m "Bom, eu já te vi algumas vezes por aqui. Acho você bonita! Então..."
 
         "Merda..."
@@ -629,6 +634,8 @@ label start:
 
         m "Ni hao fine shyt"
 
+        hide m emba
+        show m confuse at left
         g "..."
 
         m "haha..."
@@ -638,17 +645,21 @@ label start:
         m "Aliás, eu sou do Vietnã"
 
         g "Eu sou japonesa"
-
+        hide m confuse
+        show m happy at left
         m "Sério??? Você não vai acreditar, mas eu tô aprendendo japonês."
 
         g "Que legal! E como está indo?"
-
+        hide m happy
+        show m emba at left
         m "Pra ser sincero, até que bem, mas eu não tenho ninguém pra praticar."
 
         m "Ei! Você poderia me ajudar? A praticar japonês."
 
         g "Hmm... eu tô comendo agora então... não é um bom momento, sabe?"
 
+        hide m emba
+        show m happy at left
         m "Ah... não quero te incomodar... desculpa."
 
         m "Bom... prazer em te conhecer."
@@ -658,7 +669,9 @@ label start:
         "Mas antes de eu sentar, ela disse:"
 
         g "Espera!! Não é nada estranho um estrangeiro se interessar pela minha língua. Eu te ajudo. Você usa alguma rede social? IG? Line?"
-
+        
+        hide m happy
+        show m emba at left
         m "Ah, eu tenho Line, mas nunca usei muito. Ninguém usa isso aqui nos EUA. Também tenho IG. Vamos de IG."
 
         g "Ok ok."
@@ -678,7 +691,8 @@ label start:
         m "Pronto, esse é meu IG."
 
         g "Ok. Você já pediu pra seguir?"
-
+        hide m emba
+        show m happy at left
         m "Sim! Muito obrigado mesmo. Vou carregar meu celular assim que puder."
 
         g "Haha, tranquilo."
@@ -702,7 +716,8 @@ label start:
         jump after_cof_pt
 
     label bad_end_pt:
-
+        
+        hide m happy
         stop music fadeout 1.0
 
         play music driftaway volume 0.6
@@ -735,7 +750,7 @@ label start:
         play music bleached volume 0.6
 
         scene campus
-
+        show m happy at left
         "Desde aquela conversa, meus dias ficaram mais felizes e animados."
 
         "Ao mesmo tempo, eu conseguia conversar com ela sem medo de parecer estranho como antes."
@@ -760,6 +775,8 @@ label start:
 
         a "Brandon, o que você pretende fazer ano que vem?"
 
+        hide m happy
+        show m confuse at left
         "A pergunta me pegou de surpresa. Porque talvez eu vá me transferir."
 
         "O clima ficou meio estranho."
@@ -791,6 +808,8 @@ label start:
 
         "Eu fiquei nervoso, mas continuei mesmo assim. Achei que ser honesto seria melhor."
 
+        hide m confuse
+        show m sad at left
         m "Infelizmente, eu não vou estar aqui ano que vem. Vou me transferir para uma universidade em outro estado."
 
         a "Espera, por que transferir? Eu acho que essa faculdade nem é tão ruim."
@@ -800,7 +819,9 @@ label start:
         m "Claro que não é ruim! Mas sabe como é... eu consegui uma bolsa melhor lá, então não pude recusar..."
 
         a "Que pena... teria sido legal se você ficasse e a gente pudesse continuar se encontrando assim..."
-
+        
+        hide m sad
+        show m happy at left
         a "MAS EIIII!!! PARABÉNS!!! ISSO É MUITO BOM!!!"
 
         m "Muito obrigado!!"
@@ -809,10 +830,13 @@ label start:
 
         m "..."
 
+        hide m happy
+        show m emba at left
         a "Ei, a gente ainda pode aproveitar o tempo que resta enquanto você está aqui, ok?"
 
         m "Sim, claro! Ainda temos bastante tempo!"
 
+        hide m emba
         "Depois dessa conversa, apesar da Aoi ficar um pouco triste quando o assunto surgia, nós dois acabamos nos aproximando ainda mais."
 
         "Eventualmente, o inevitável chegou. As provas finais passaram. O segundo ano acabou. E eu tive que ir embora."
@@ -821,16 +845,20 @@ label start:
 
         "No dia da partida, ela me manda mensagem:"
 
+        show m sad at left
         a "Então hoje é o dia que você vai embora, né?"
 
         m "É..."
 
         a "Que pena que não posso me despedir pessoalmente. Estou no Japão agora 😭😭"
-
+        hide m sad
+        show m happy at left
         m "Haha, tudo bem. Mas vou sentir sua falta. Com certeza vou te contar sobre minha nova faculdade quando chegar lá!"
 
         a "Sim! Não esquece de me mandar mensagem. Se esquecer eu te mato!."
 
+        hide m happy
+        show m emba at left
         m "Eu nunca esqueceria você, sua boba!"
 
         a "É bom mesmo! hmph 😤"
@@ -854,6 +882,8 @@ label start:
 
         $ preferences.text_cps = 30
 
+        hide m confuse
+        show m happy at left
         m "Bom, eu estou pensando em procurar estágios. Já que no terceiro ano é quando você deve começar mais cedo."
 
         a "Ah, entendi."
@@ -868,10 +898,14 @@ label start:
 
         m "É... é difícil escolher."
 
+        hide m happy
         "As provas finais chegaram, e eu fui embora sem que a Aoi soubesse."
 
+        show m normal at left
         a "Onde você está? Não te vi mais. O novo ano letivo está prestes a começar 😢😢😢"
 
+        hide m normal
+        show m confuse at left
         m "Aoi… você não vai ficar brava comigo pelo que eu vou dizer, né?"
 
         a "Hmm? Pode falar, não vou ficar brava."
@@ -881,15 +915,18 @@ label start:
         m "Eu não queria machucar seus sentimentos."
 
         "Aoi demorou um pouco antes de responder."
-
+        hide m confuse
+        show m happy at left
         a "Ah haha… tudo bem. A gente ainda pode manter contato. Só não pessoalmente…"
-
+        hide m happy
+        show m emba at left
         m "Você realmente não ficou triste?"
 
         a "Um pouco, mas sabe... é a sua vida, e se isso te faz feliz, eu também fico feliz!"
 
         m "Ahh obrigado!! Eu só estava com medo de te deixar triste. Me desculpa mesmo 😭😭😭"
 
+        hide m emba
         "Mas na verdade, Aoi ficou muito triste por ele não ter sido honesto."
 
         "Mesmo continuando em contato, a proximidade entre eles nunca mais pôde crescer por causa da distância."
@@ -950,7 +987,9 @@ label start:
 
         play music lol volume 0.5 
 
-        scene sky
+        scene sky   
+
+        hide m normal
 
         $ preferences.text_cps = 30
 
@@ -990,6 +1029,8 @@ label start:
 
         "Sea lo que sea, es todo o nada, me dije."
 
+        show m confuse at left
+
         m "Hola… disculpa."
 
         "Forcé las palabras a salir."
@@ -1004,7 +1045,8 @@ label start:
 
         "Maldición..."
         "Vamos a arriesgarnos un poco más."
-
+        hide m confuse
+        show m emba at left
         m "Bueno, te he visto por ahí unas cuantas veces. ¡Creo que eres linda! Así que…"
         
         "Maldita sea..." 
@@ -1021,7 +1063,8 @@ label start:
         g "¿De verdad?? ¡Yo también soy asiática!"
 
         m "Ni hao fine shyt"
-
+        hide m emba
+        show m confuse at left
         g "…"
         
         m "jaja..." 
@@ -1031,17 +1074,20 @@ label start:
         m "Por cierto, soy de Vietnam"
 
         g "Soy japonesa"
-
+        hide m confuse
+        show m happy at left
         m "¡No puede ser! No lo vas a creer, pero estoy aprendiendo japonés."
 
         g "¡Qué bien! ¿Y cómo va eso?"
-
+        hide m happy
+        show m emba at left
         m "Para ser honesto, bastante bien, pero no tengo con quién practicar."
 
         m "¡Oye! ¿Podrías ayudarme? Con el japonés."
         
         g "Hmm… estoy comiendo ahora, así que… no es un buen momento, ¿sabes?"
-
+        hide m emba
+        show m happy at left
         m "Oh… no quiero molestarte… lo siento."
 
         m "Bueno… un gusto conocerte."
@@ -1051,7 +1097,8 @@ label start:
         "Pero antes de que pudiera sentarme, ella dijo:"
 
         g "¡Espera! No es tan desagradable que un extranjero se interese en mi idioma. Te ayudaré. ¿Usas alguna red social? ¿IG? ¿Line?"
-
+        hide m happy
+        show m emba at left
         m "Oh, tengo Line, solo que nunca la he usado realmente. Nadie usa Line en EE.UU. de todos modos. También tengo IG. Mejor usemos IG."
 
         g "Ok, ok."
@@ -1071,7 +1118,8 @@ label start:
         m "Listo, aquí está mi IG."
 
         g "Está bien. ¿Solicitaste seguirme?"
-
+        hide m emba
+        show m happy at left
         m "¡Sí! Muchas gracias. Cargaré mi teléfono lo antes posible."
 
         g "Jaja, no hay problema."
@@ -1099,6 +1147,9 @@ label start:
         play music driftaway volume 0.6
 
         scene sky
+
+        hide m happy
+
         $ preferences.text_cps = 30
         
         m "Sí, ¿en qué estaba pensando?"
@@ -1123,6 +1174,7 @@ label start:
         play music bleached volume 0.6
 
         scene campus
+        show m happy at left
         "Desde esa conversación, mis días se llenaron de más felicidad y vitalidad."
 
         "Al mismo tiempo, podía empezar conversaciones con ella sin temer ser visto como desagradable como antes."
@@ -1146,7 +1198,8 @@ label start:
         "Aoi de repente me preguntó:"
         
         a "Brandon, ¿qué planes tienes para el próximo año?"
-
+        hide m happy
+        show m confuse at left
         "Su pregunta me tomó por sorpresa. Podría transferirme el próximo año."
 
         "El ambiente se volvió ligeramente incómodo."
@@ -1175,7 +1228,8 @@ label start:
         a "Hmm? Adelante. Debería estar bien."
 
         "Me sentí nervioso, pero continué. Pensé que ser honesto sería mejor."
-
+        hide m confuse
+        show m sad at left
         m "Desafortunadamente, el próximo año no estaré aquí. Me transferiré a una universidad en otro estado."
 
         a "Espera, ¿por qué transferirte? Creo que esta escuela no está tan mal."
@@ -1185,7 +1239,8 @@ label start:
         m "¡Claro que no está mal! Pero ya sabes… obtuve una mejor beca allí, así que no podía rechazarla…"
 
         a "Qué lástima… hubiera sido agradable que te quedaras y pudiéramos seguir viéndonos así…"
-
+        hide m sad
+        show m happy at left
         a "¡Pero HEYYY!!! ¡FELICIDADES!!! ¡ESO ES INCREÍBLE!!!"
 
         m "¡Muchísimas gracias!"
@@ -1193,11 +1248,12 @@ label start:
         a "…"
 
         m "…"
-
+        hide m happy
+        show m emba at left
         a "Oye, podemos disfrutar el tiempo que nos queda mientras aún estás aquí, ¿ok?"
 
         m "¡Sí, por supuesto! ¡Tenemos mucho tiempo!"
-
+        hide m emba
         "Después de esa conversación, aunque Aoi se sentía un poco triste cada vez que surgía el tema, los dos nos acercamos más."
 
         "Eventualmente, lo inevitable llegó. Pasaron los exámenes finales. Terminó el segundo año. Y tuve que irme."
@@ -1205,17 +1261,19 @@ label start:
         scene airport
 
         "El día de la partida, ella me envió un mensaje:"
-
+        show m sad at left
         a "Así que hoy es el día que te vas, ¿verdad?"
 
         m "Sí…"
 
         a "Qué pena que no pueda despedirme en persona. Estoy en Japón ahora. 😭😭"
-
+        hide m sad
+        show m happy at left
         m "Jaja, está bien. Pero te extrañaré. ¡Te contaré todo sobre mi nueva escuela cuando llegue!"
 
         a "¡Sí! No olvides enviarme un mensaje. Si lo olvidas, ¡te mataré!."
-
+        hide m happy
+        show m emba at left
         m "¡Nunca te olvidaría, tonta!"
         
         a "¡Más te vale! hmph 😤"
@@ -1237,6 +1295,8 @@ label start:
         play music onceupon volume 0.5
 
         $ preferences.text_cps = 30
+        hide m confuse
+        show m happy at left
         m "Bueno, estoy planeando buscar oportunidades de prácticas. Ya que el tercer año es cuando uno debería comenzar temprano."
 
         a "Ah, entiendo."
@@ -1250,11 +1310,12 @@ label start:
         a "No estoy segura si quiero volver o quedarme aquí…"
 
         m "Sí… es difícil elegir."
-
+        hide m happy
         "Llegaron los exámenes finales, y me fui sin que Aoi lo supiera."
-
+        show m normal at left
         a "¿Dónde estás? No te he visto en absoluto. El nuevo año escolar está a punto de comenzar. 😢😢😢"
-
+        hide m normal
+        show m confuse at left
         m "Aoi… no te enojarás por lo que voy a decir, ¿verdad?"
 
         a "Hmm? Adelante, no me enojaré."
@@ -1264,15 +1325,17 @@ label start:
         m "No quería herirte."
 
         "Aoi hizo una pausa antes de responder."
-
+        hide m confuse
+        show m happy at left
         a "Ah jaja… está bien. Podemos seguir en contacto. Solo que no en persona…"
-
+        hide m happy
+        show m emba at left
         m "¿De verdad no estás triste?"
 
         a "Un poco, pero sabes… es tu vida y si te hace feliz, ¡yo también estoy feliz!"
 
         m "¡Oh, gracias!! Solo tenía miedo de entristecerte. Lo siento mucho. 😭😭😭"
-
+        hide m emba
         "Pero en realidad, Aoi estaba muy triste porque no fui honesto con ella."
 
         "Aunque mantuvieron contacto, su cercanía nunca pudo crecer más debido a la distancia."
@@ -1333,6 +1396,7 @@ label start:
 
         $ preferences.text_cps = 30
 
+        hide m normal
         m "SPINGI L'ONDA MERDA EZREAL"
 
         "30 minuti dopo..."
@@ -1367,6 +1431,7 @@ label start:
 
         "Va bene, tutto o niente, mi dissi."
 
+        show m confuse at left
         m "Ciao… scusa."
 
         "Forzai le parole a uscire."
@@ -1381,7 +1446,9 @@ label start:
 
         "Dannazione..."
         "Proviamo ad andare un po' più avanti."
-
+        
+        hide m confuse
+        show m emba at left
         m "Beh, ti ho visto qualche volta in giro. Penso che tu sia carina! Quindi…"
         
         "Cazzo..." 
@@ -1398,7 +1465,8 @@ label start:
         g "Davvero?? Anch'io sono asiatica!"
 
         m "Ni hao fine shyt"
-
+        hide m emba
+        show m confuse at left
         g "…"
         
         m "Haha..." 
@@ -1407,18 +1475,22 @@ label start:
 
         m "A proposito, vengo dal Vietnam"
 
+        
         g "Sono giapponese"
-
+        hide m confuse
+        show m happy at left
         m "No waaay!!! Non ci crederai, ma sto imparando il giapponese."
 
         g "Che bello! E come va?"
-
+        hide m happy
+        show m emba at left
         m "Ad essere onesto, abbastanza bene, ma non ho nessuno con cui praticare."
 
         m "Ehi! Potresti aiutarmi? Con il giapponese."
         
         g "Hmm… sto mangiando adesso, quindi… non è un buon momento, sai?"
-
+        hide m emba
+        show m happy at left
         m "Oh… non voglio disturbarti… scusa."
 
         m "Comunque… piacere di conoscerti."
@@ -1428,7 +1500,8 @@ label start:
         "Ma prima che potessi sedermi, disse:"
 
         g "Aspetta!! Non è così disgustoso che uno straniero sia interessato alla mia lingua. Ti aiuterò. Usi qualche social? IG? Line?"
-
+        hide m happy
+        show m emba at left
         m "Oh, ho Line, ma non l'ho mai usato seriamente. Nessuno usa Line negli Stati Uniti comunque. Ho anche IG. Meglio usare IG."
 
         g "Ok, ok."
@@ -1448,7 +1521,8 @@ label start:
         m "Ecco, il mio IG."
 
         g "Ok. Hai richiesto di seguirmi?"
-
+        hide m emba
+        show m happy at left
         m "Sì! Grazie mille. Caricherò il telefono il prima possibile."
 
         g "Haha, nessun problema."
@@ -1471,7 +1545,7 @@ label start:
         jump after_cof_ita
 
     label bad_end_ita:
-
+        hide m happy
         stop music fadeout 1.0
 
         play music driftaway volume 0.6
@@ -1502,6 +1576,7 @@ label start:
         play music bleached volume 0.6
 
         scene campus
+        show m happy at left
         "Da quella conversazione, i miei giorni sono diventati più felici e vivaci."
 
         "Allo stesso tempo, potevo iniziare conversazioni con lei senza temere di sembrare disgustoso come prima."
@@ -1525,7 +1600,8 @@ label start:
         "Aoi improvvisamente mi chiese:"
         
         a "Brandon, cosa prevedi di fare l'anno prossimo?"
-
+        hide m happy
+        show m confuse at left
         "La sua domanda mi colse di sorpresa. Potrei trasferirmi l'anno prossimo."
 
         "L'atmosfera diventò leggermente imbarazzante."
@@ -1555,7 +1631,8 @@ label start:
         a "Hmm? Vai avanti. Dovrebbe andare bene."
 
         "Ero nervoso, ma continuai. Pensavo che essere onesti sarebbe stato meglio."
-
+        hide m confuse
+        show m sad at left
         m "Sfortunatamente, il prossimo anno non sarò qui. Mi trasferirò in un'università in un altro stato."
 
         a "Aspetta, perché trasferirti? Penso che questa scuola non sia così male."
@@ -1565,7 +1642,8 @@ label start:
         m "Certo che non è male! Ma sai… ho ottenuto una borsa di studio migliore lì, quindi non potevo rifiutarla…"
 
         a "Che peccato… sarebbe stato bello se fossi rimasto e ci saremmo potuti vedere ancora così…"
-
+        hide m sad
+        show m happy at left
         a "Ma HEYYY!!! CONGRATULAZIONI!!! È DAVVERO FANTASTICO!!!"
 
         m "Grazie mille!!"
@@ -1573,11 +1651,12 @@ label start:
         a "…"
 
         m "…"
-
+        hide m happy
+        show m emba at left
         a "Ehi, possiamo goderci il tempo che ci resta mentre sei ancora qui, ok?"
 
         m "Sì, certo! Abbiamo molto tempo!"
-
+        hide m emba
         "Dopo quella conversazione, anche se Aoi era un po' triste ogni volta che se ne parlava, in realtà ci avvicinammo di più."
 
         "Alla fine, l'inevitabile arrivò. Gli esami finali passarono. Il secondo anno finì. E dovetti andare via."
@@ -1585,17 +1664,19 @@ label start:
         scene airport
 
         "Il giorno della partenza, mi scrisse un messaggio:"
-
+        show m sad at left
         a "Quindi oggi è il giorno in cui te ne vai, giusto?"
 
         m "Sì…"
 
         a "Peccato che non possa salutarti di persona. Sono in Giappone adesso. 😭😭"
-
+        hide m sad
+        show m happy at left
         m "Haha, va bene. Ma mi mancherai. Ti racconterò tutto sulla mia nuova scuola quando arriverò!"
 
         a "Sì! Non dimenticare di scrivermi. Se dimentichi, ti ucciderò!."
-
+        hide m happy
+        show m emba at left
         m "Non ti dimenticherei mai, sciocca!"
         
         a "Meglio per te! hmph 😤"
@@ -1617,6 +1698,9 @@ label start:
         play music onceupon volume 0.5
 
         $ preferences.text_cps = 30
+
+        hide m confuse
+        show m happy at left
         m "Beh, sto pianificando di cercare opportunità di tirocinio. Poiché il terzo anno è quando dovresti iniziare presto."
 
         a "Ah, capisco."
@@ -1631,10 +1715,12 @@ label start:
 
         m "Sì… è difficile scegliere."
 
+        hide m happy
         "Arrivarono gli esami finali, e me ne andai senza che Aoi lo sapesse."
-
+        show m normal at left
         a "Dove sei? Non ti ho visto affatto. Il nuovo anno scolastico sta per iniziare. 😢😢😢"
-
+        hide m normal
+        show m confuse at left
         m "Aoi… non ti arrabbierai per quello che sto per dire, vero?"
 
         a "Hmm? Vai avanti, non mi arrabbierò."
@@ -1644,15 +1730,17 @@ label start:
         m "Non volevo ferirti."
 
         "Aoi fece una pausa prima di rispondere."
-
+        hide m confuse
+        show m happy at left
         a "Ah haha… va bene. Possiamo rimanere in contatto. Solo che non di persona…"
-
+        hide m happy
+        show m emba at left
         m "Davvero non sei triste?"
 
         a "Un po', ma sai… è la tua vita e se ti rende felice, sono felice anch'io!"
 
         m "Oh, grazie!! Avevo solo paura di renderti triste. Mi dispiace davvero. 😭😭😭"
-
+        hide m emba
         "Ma in realtà, Aoi era molto triste che non fossi stato onesto con lei."
 
         "Anche se rimasero in contatto, la loro vicinanza non poté crescere ulteriormente a causa della distanza."
@@ -1714,6 +1802,8 @@ label start:
 
         $ preferences.text_cps = 30
 
+        hide m normal
+
         m "POUSSE LA VAGUE MERDE EZREAL"
 
         "30 minutes plus tard..."
@@ -1748,6 +1838,8 @@ label start:
 
         "Quoi qu'il en soit, c'est tout ou rien, me dis-je."
 
+        show m confuse at left
+
         m "Salut… excuse-moi."
 
         "Je forçai les mots à sortir."
@@ -1762,7 +1854,8 @@ label start:
 
         "Merde..."
         "Allons un peu plus loin."
-
+        hide m confuse
+        show m emba at left
         m "Eh bien, je t'ai vue quelques fois dans les parages. Je pense que tu es mignonne ! Donc…"
         
         "Merde..." 
@@ -1779,7 +1872,8 @@ label start:
         g "Vraiment ?? Moi aussi je suis asiatique !"
 
         m "Ni hao fine shyt"
-
+        hide m emba
+        show m confuse at left
         g "…"
         
         m "Haha..." 
@@ -1789,17 +1883,20 @@ label start:
         m "Au fait, je viens du Vietnam"
 
         g "Je suis japonaise"
-
+        hide m confuse
+        show m happy at left
         m "No waaay !!! Tu ne vas pas le croire, mais j'apprends le japonais."
 
         g "C'est super ! Et comment ça se passe ?"
-
+        hide m happy
+        show m emba at left
         m "Pour être honnête, plutôt bien, mais je n'ai personne avec qui pratiquer."
 
         m "Hé ! Tu pourrais m'aider ? Pour pratiquer le japonais."
         
         g "Hmm… je mange en ce moment, donc… ce n'est pas un bon moment, tu sais ?"
-
+        hide m emba
+        show m happy at left
         m "Oh… je ne veux pas te déranger… désolé."
 
         m "Bon… enchanté."
@@ -1809,7 +1906,8 @@ label start:
         "Mais avant que je puisse m'asseoir, elle dit :"
 
         g "Attends !! Ce n'est pas dégoûtant qu'un étranger s'intéresse à ma langue. Je vais t'aider. Tu utilises un réseau social ? IG ? Line ?"
-
+        hide m happy
+        show m emba at left
         m "Oh, j'ai Line, mais je ne l'ai jamais vraiment utilisé. Personne n'utilise Line aux États-Unis de toute façon. J'ai aussi IG. Allons-y avec IG."
 
         g "Ok, ok."
@@ -1827,9 +1925,10 @@ label start:
         "Elle me donna son iPhone et écrivit mon IG rapidement."
 
         m "Voilà, mon IG."
-
+        
         g "Ok. As-tu demandé à me suivre ?"
-
+        hide m emba
+        show m happy at left
         m "Oui ! Merci beaucoup. Je chargerai mon téléphone dès que possible."
 
         g "Haha, pas de problème."
@@ -1852,7 +1951,7 @@ label start:
         jump after_cof_fr
 
     label bad_end_fr:
-
+        hide m happy
         stop music fadeout 1.0
 
         play music driftaway volume 0.6
@@ -1882,6 +1981,7 @@ label start:
 
         play music bleached volume 0.6
         scene campus
+        show m happy at left
         "Depuis cette conversation, mes journées sont devenues plus joyeuses et animées."
 
         "En même temps, je pouvais commencer des conversations avec elle sans craindre d’être perçu comme dégoûtant comme avant."
@@ -1903,7 +2003,8 @@ label start:
         "Puis un jour, à la mi-avril—"
 
         "Aoi me demanda soudain :"
-        
+        hide m happy
+        show m confuse at left
         a "Brandon, que comptes-tu faire l'année prochaine ?"
 
         "Sa question me prit au dépourvu. Car je pourrais me transférer l'année prochaine."
@@ -1935,7 +2036,8 @@ label start:
         a "Hmm ? Vas-y. Ça devrait aller."
 
         "J'étais nerveux mais je continuai. Je pensais qu'être honnête serait mieux."
-
+        hide m confuse
+        show m sad at left
         m "Malheureusement, je ne serai pas ici l'année prochaine. Je vais me transférer dans une université dans un autre état."
 
         a "Attends, pourquoi te transférer ? Je pense que cette école n'est pas si mal."
@@ -1945,7 +2047,8 @@ label start:
         m "Bien sûr que ce n'est pas mal ! Mais tu sais… j'ai obtenu une meilleure bourse là-bas donc je ne pouvais pas refuser…"
 
         a "Quel dommage… ça aurait été bien si tu étais resté et que nous pouvions continuer à nous voir comme ça…"
-
+        hide m sad
+        show m happy at left
         a "Mais HEYYY !!! FÉLICITATIONS !!! C'EST VRAIMENT BIEN !!!"
 
         m "Merci beaucoup !!"
@@ -1953,11 +2056,12 @@ label start:
         a "…"
 
         m "…"
-
+        hide m happy
+        show m emba at left
         a "Hé, nous pouvons profiter du temps qu'il nous reste tant que tu es encore là, d'accord ?"
 
         m "Oui bien sûr ! Nous avons beaucoup de temps !"
-
+        hide m emba
         "Après cette conversation, même si Aoi était un peu triste chaque fois que le sujet revenait, nous nous sommes en fait rapprochés."
 
         "Finalement, l'inévitable arriva. Les examens finaux passèrent. La deuxième année se termina. Et je dus partir."
@@ -1965,17 +2069,19 @@ label start:
         scene airport
 
         "Le jour du départ, elle m'envoya un message :"
-
+        show m sad at left
         a "Alors aujourd'hui, c'est le jour où tu pars, n'est-ce pas ?"
 
         m "Oui…"
 
         a "Dommage que je ne puisse pas te dire au revoir en personne. Je suis au Japon maintenant. 😭😭"
-
+        hide m sad
+        show m happy at left
         m "Haha, ça va. Mais tu vas me manquer. Je te raconterai tout sur ma nouvelle école quand j'arriverai !"
 
         a "Oui ! N'oublie pas de m'envoyer un message. Si tu oublies, je vais te tuer !."
-
+        hide m happy
+        show m emba at left
         m "Je ne t'oublierai jamais, idiote !"
         
         a "Tu ferais mieux de ne pas ! hmph 😤"
@@ -1996,6 +2102,8 @@ label start:
 
         play music onceupon volume 0.5
 
+        hide m confuse
+        show m happy at left
         $ preferences.text_cps = 30
         m "Eh bien, je prévois de chercher des opportunités de stage. Puisque la troisième année est le moment où il faut commencer tôt."
 
@@ -2010,11 +2118,12 @@ label start:
         a "Je ne sais pas encore si je veux revenir ou rester ici…"
 
         m "Oui… c'est difficile de choisir."
-
+        hide m happy
         "Les examens finaux arrivèrent, et je partis sans qu'Aoi le sache."
-
+        show m normal at left
         a "Où es-tu ? Je ne t'ai pas du tout vu. La nouvelle année scolaire est sur le point de commencer. 😢😢😢"
-
+        hide m normal
+        show m confuse at left
         m "Aoi… tu ne seras pas fâchée par ce que je vais dire, n'est-ce pas ?"
 
         a "Hmm ? Vas-y, je ne me fâcherai pas."
@@ -2024,15 +2133,17 @@ label start:
         m "Je ne voulais pas te blesser."
 
         "Aoi fit une pause avant de répondre."
-
+        hide m confuse
+        show m happy at left
         a "Ah haha… ça va. Nous pouvons rester en contact. Juste pas en personne…"
-
+        hide m happy
+        show m emba at left
         m "Tu n'es vraiment pas triste ?"
 
         a "Un peu, mais tu sais… c'est ta vie et si ça te rend heureux, je suis heureuse aussi !"
 
         m "Oh merci !! J'avais juste peur de te rendre triste. Je suis vraiment désolé. 😭😭😭"
-
+        hide m emba
         "Mais en réalité, Aoi était très triste que je n'aie pas été honnête avec elle."
 
         "Même s'ils restèrent en contact, leur proximité ne put jamais s'approfondir à cause de la distance."
@@ -2093,7 +2204,8 @@ label start:
 
         play music lol volume 0.5 
 
-        scene sky
+        scene sky   
+        hide m normal
 
         $ preferences.text_cps = 30
 
@@ -2132,7 +2244,7 @@ label start:
         "Als ich näher kam, fühlte sich mein Herzschlag wie verdreifacht an. Nervosität und eine Flut nicht so guter Erinnerungen an frühere Gespräche mit Mädchen stürzten auf mich ein wie ein Tsunami."
 
         "Egal, alles oder nichts, sagte ich mir."
-
+        show m confuse at left
         m "Hey... entschuldige."
 
         "Ich zwang die Worte heraus."
@@ -2147,7 +2259,8 @@ label start:
 
         "Verdammt..."
         "Lass uns ein bisschen weiter gehen."
-
+        hide m confuse
+        show m emba at left
         m "Nun, ich habe dich ein paar Mal gesehen. Ich finde dich süß! Also..."
 
         "Scheiße..." 
@@ -2164,7 +2277,8 @@ label start:
         g "Echt?? Ich bin auch asiatisch!"
 
         m "Ni hao, fine shyt"
-
+        hide m emba
+        show m confuse at left
         g "..."
 
         m "Haha..." 
@@ -2174,17 +2288,20 @@ label start:
         m "Übrigens, ich komme aus Vietnam"
 
         g "Ich bin Japanerin"
-
+        hide m confuse
+        show m happy at left
         m "Nein waaay!!! Du wirst es nicht glauben, aber ich lerne Japanisch."
 
         g "Das ist schön! Und wie läuft es?"
-
+        hide m happy
+        show m emba at left
         m "Ehrlich gesagt, ganz gut, aber ich habe niemanden zum Üben."
 
         m "Hey! Kannst du mir helfen? Beim Japanisch üben."
 
         g "Hmm... Ich esse gerade, also... ist gerade keine gute Zeit, weißt du?"
-
+        hide m emba
+        show m happy at left
         m "Oh... ich will dich nicht stören... Entschuldigung."
 
         m "Na ja... schön, dich kennenzulernen."
@@ -2194,7 +2311,8 @@ label start:
         "Aber bevor ich mich setzen konnte, sagte sie:"
 
         g "Warte!! Es ist nicht eklig, dass sich ein Ausländer für meine Sprache interessiert. Ich helfe dir. Benutzt du Social Media? IG? Line?"
-
+        hide m happy
+        show m emba at left
         m "Oh, ich habe Line, habe es aber nie wirklich benutzt. In den USA benutzt sowieso niemand Line. Ich habe auch IG. Dann nehmen wir IG."
 
         g "Ok ok."
@@ -2214,7 +2332,8 @@ label start:
         m "Alles klar, hier ist mein IG."
 
         g "Okay. Hast du die Anfrage geschickt?"
-
+        hide m emba
+        show m happy at left
         m "Ja! Vielen Dank. Ich lade mein Handy so schnell wie möglich auf."
 
         g "Haha, kein Problem."
@@ -2237,7 +2356,8 @@ label start:
         jump after_cof_german
 
     label bad_end_german:
-
+        
+        hide m happy
         stop music fadeout 1.0
 
         play music driftaway volume 0.6
@@ -2267,7 +2387,8 @@ label start:
 
         play music bleached volume 0.6
 
-        scene campus
+        scene campus   
+        show m happy at left
         "Seit diesem Gespräch wurden meine Tage glücklicher und lebendiger."
 
         "Gleichzeitig konnte ich nun problemlos Gespräche mit ihr beginnen, ohne Angst zu haben, wie zuvor ekelhaft wahrgenommen zu werden."
@@ -2291,7 +2412,8 @@ label start:
         "Fragte Aoi mich plötzlich:"
 
         a "Brandon, was hast du nächstes Jahr vor?"
-
+        hide m happy
+        show m confuse at left
         "Ihre Frage überraschte mich, da ich vielleicht nächstes Jahr wechseln würde."
 
         "Die Atmosphäre wurde etwas unangenehm."
@@ -2321,7 +2443,8 @@ label start:
         a "Hmm? Sag es ruhig. Es sollte in Ordnung sein."
 
         "Ich fühlte mich nervös, aber sprach trotzdem weiter. Ich dachte, es wäre besser, ehrlich zu sein."
-
+        hide m confuse
+        show m sad at left
         m "Leider werde ich nächstes Jahr nicht hier sein. Ich werde zu einer Universität in einem anderen Bundesstaat wechseln."
 
         a "Warte, warum wechseln? Ich denke, diese Schule ist nicht so schlecht."
@@ -2331,7 +2454,8 @@ label start:
         m "Natürlich ist sie nicht schlecht! Aber weißt du... Ich bekam dort ein besseres Stipendium, also konnte ich nicht ablehnen..."
 
         a "Das ist schade... Es wäre schön gewesen, wenn du geblieben wärst und wir uns weiterhin so treffen könnten..."
-
+        hide m sad
+        show m happy at left
         a "Aber HEYYY!!! HERZLICHEN GLÜCKWUNSCH!!! DAS IST WIRKLICH GUT!!!"
 
         m "Vielen Dank!!"
@@ -2339,11 +2463,12 @@ label start:
         a "..."
 
         m "..."
-
+        hide m happy
+        show m emba at left
         a "Hey, wir können die Zeit, die wir noch haben, genießen, solange du noch hier bist, okay?"
 
         m "Ja, natürlich! Wir haben viel Zeit!"
-
+        hide m emba
         "Nach diesem Gespräch, obwohl Aoi sich manchmal etwas traurig fühlte, wuchsen wir tatsächlich näher zusammen."
 
         "Schließlich kam das Unvermeidliche. Die Abschlussprüfungen bestanden. Das zweite Jahr endete. Und ich musste gehen."
@@ -2351,17 +2476,19 @@ label start:
         scene airport
 
         "Am Tag der Abreise schrieb sie mir:"
-
+        show m sad at left
         a "Also, heute ist der Tag, an dem du gehst, richtig?"
 
         m "Ja..."
 
         a "Schade, dass ich mich nicht persönlich verabschieden kann. Ich bin gerade in Japan. 😭😭"
-
+        hide m sad
+        show m happy at left
         m "Haha, ist schon okay. Aber ich werde dich vermissen. Ich werde dir definitiv von meiner neuen Schule erzählen, wenn ich dort ankomme!"
 
         a "Ja! Vergiss nicht mir zu schreiben. Wenn du es vergisst, bringe ich dich um!."
-
+        hide m happy
+        show m emba at left
         m "Ich würde dich nie vergessen, Dummkopf!"
 
         a "Du besser nicht! Hmpf 😤"
@@ -2382,7 +2509,10 @@ label start:
 
         play music onceupon volume 0.5
 
-        $ preferences.text_cps = 30
+        $ preferences.text_cps = 30 
+        
+        hide m confuse
+        show m happy at left
         m "Nun, ich plane, nach Praktikumsmöglichkeiten zu suchen. Im dritten Jahr sollte man früh anfangen."
 
         a "Oh, verstehe."
@@ -2396,11 +2526,12 @@ label start:
         a "Ich bin mir noch nicht sicher, ob ich zurück will oder hier bleiben..."
 
         m "Ja... schwer zu entscheiden."
-
+        hide m happy
         "Die Abschlussprüfungen kamen, und ich ging, ohne dass Aoi es wusste."
-
+        show m normal at left
         a "Wo bist du? Ich habe dich überhaupt nicht gesehen. Das neue Schuljahr beginnt bald. 😢😢😢"
-
+        hide m normal
+        show m confuse at left
         m "Aoi… du wirst mir nicht böse sein für das, was ich jetzt sage, oder?"
 
         a "Hmm? Sag ruhig, ich werde nicht böse sein."
@@ -2410,15 +2541,17 @@ label start:
         m "Ich wollte deine Gefühle nicht verletzen."
 
         "Aoi machte eine kurze Pause, bevor sie antwortete."
-
+        hide m confuse
+        show m happy at left
         a "Ah haha… es ist okay. Wir können trotzdem in Kontakt bleiben. Nur nicht persönlich…"
-
+        hide m happy
+        show m emba at left
         m "Du bist wirklich nicht traurig?"
 
         a "Ein bisschen, aber weißt du... es ist dein Leben, und wenn es dich glücklich macht, bin ich auch glücklich!"
 
         m "Ohh danke!! Ich hatte nur Angst, dich traurig zu machen. Es tut mir wirklich leid. 😭😭😭"
-
+        hide m emba
         "Aber in Wirklichkeit war Aoi sehr traurig, dass er nicht ehrlich zu ihr war."
 
         "Auch wenn sie in Kontakt blieben, konnte ihre Nähe aufgrund der Entfernung nie weiter wachsen."
@@ -2481,6 +2614,8 @@ label start:
 
         scene sky
 
+        hide m normal
+
         $ preferences.text_cps = 30
 
         m "Đẩy wave lính đi Ezreal, dễ ẹc à sao mày ngo thế con!"
@@ -2520,6 +2655,8 @@ label start:
 
         "Thôi được, tất cả hoặc không gì cả, tôi tự nhủ."
 
+        show m confuse at left
+
         m "Chào... xin lỗi."
 
         "Tôi gắng gượng nói ra câu đó."
@@ -2534,7 +2671,8 @@ label start:
 
         "Chết tiệt..."
         "Tiếp tục một chút."
-
+        hide m confuse
+        show m emba at left
         m "À, tôi đã thấy bạn vài lần. Tôi nghĩ bạn dễ thương! Vậy nên..."
 
         "Chết tiệt..." 
@@ -2551,7 +2689,8 @@ label start:
         g "Thật sao??"
 
         m "Ni hao fine shyt"
-
+        hide m emba
+        show m confuse at left
         g "..."
 
         "Bỏ mẹ. Đùa ngo quá. Chết con rồi. AAAAAA."
@@ -2563,17 +2702,20 @@ label start:
         m "Nhân tiện mình là người Việt"
 
         g "Tôi là người Nhật"
-
+        hide m confuse
+        show m happy at left
         m "Không thể tin được!!! Nhưng tôi đang học tiếng Nhật á."
 
         g "Hay quá! Và tiến triển thế nào rồi?"
-
+        hide m happy
+        show m emba at left
         m "Thành thật mà nói, cũng khá tốt nhưng tôi không có ai để luyện cùng."
 
         m "Này! Bạn có thể giúp tôi không?"
         
         g "Hmm... tôi đang ăn, nên... không phải lúc tốt đâu."
-
+        hide m emba
+        show m happy at left
         m "Ồ... tôi không muốn làm phiền bạn... Xin lỗi."
 
         m "Chà... thật vui khi gặp bạn."
@@ -2583,7 +2725,8 @@ label start:
         "Nhưng trước khi tôi kịp ngồi xuống, cô ấy nói:"
 
         g "Đợi!! Không đến mức ghê tởm khi một người nước ngoài quan tâm đến ngôn ngữ của tôi đâu. Tôi sẽ giúp bạn. Bạn có dùng mạng xã hội không? IG? Line?"
-
+        hide m happy
+        show m emba at left
         m "Ồ, tôi có Line nhưng chưa dùng bao giờ. Ở Mỹ cũng ít người dùng Line. Tôi cũng có IG. Vậy dùng IG nhé."
 
         g "Ok ok."
@@ -2603,7 +2746,8 @@ label start:
         m "Được rồi, đây là IG của tôi."
 
         g "Ok. Đã gửi yêu cầu follow chưa?"
-
+        hide m emba
+        show m happy at left
         m "Rồi! Cảm ơn bạn rất nhiều. Tôi sẽ sạc điện thoại ngay lập tức."
 
         g "Haha, không sao đâu."
@@ -2626,7 +2770,7 @@ label start:
         jump after_cof_vi
 
     label bad_end_vi:
-
+        hide m happy
         stop music fadeout 1.0
 
         play music driftaway volume 0.6
@@ -2657,6 +2801,7 @@ label start:
         play music bleached volume 0.6
 
         scene campus
+        show m happy at left
         "Kể từ cuộc trò chuyện đó, những ngày của tôi trở nên hạnh phúc và sống động hơn."
 
         "Đồng thời, tôi có thể bắt đầu trò chuyện với cô ấy mà không sợ bị coi là khó chịu như trước."
@@ -2680,7 +2825,8 @@ label start:
         "Aoi bất ngờ hỏi tôi:"
         
         a "Brandon, năm tới cậu định làm gì?"
-
+        hide m happy
+        show m confuse at left
         "Câu hỏi của cô ấy khiến tôi bất ngờ. Bởi vì có thể tôi sẽ chuyển trường năm tới."
 
         "Không khí trở nên hơi ngượng ngùng."
@@ -2710,7 +2856,8 @@ label start:
         a "Hmm? Nói đi. Không sao đâu."
 
         "Tôi cảm thấy lo lắng nhưng vẫn tiếp tục. Tôi nghĩ thành thật là tốt hơn."
-
+        hide m confuse
+        show m sad at left
         m "Thật không may, tôi sẽ không ở đây năm tới. Tôi sẽ chuyển đến một trường đại học khác."
 
         a "Chờ đã, sao lại chuyển? Tôi nghĩ trường này cũng không tệ."
@@ -2720,7 +2867,8 @@ label start:
         m "Dĩ nhiên trường này không tệ! Nhưng cậu biết đấy... tôi nhận được học bổng tốt hơn nên không thể từ chối..."
 
         a "Thật tiếc... Sẽ thật tuyệt nếu cậu ở lại và chúng ta vẫn gặp nhau như này..."
-
+        hide m sad
+        show m happy at left
         a "Nhưng HEYYY!!! CHÚC MỪNG!!! THẬT TUYỆT VỜI!!!"
 
         m "Cảm ơn cậu rất nhiều!!"
@@ -2728,11 +2876,12 @@ label start:
         a "..."
 
         m "..."
-
+        hide m happy
+        show m emba at left
         a "Này, chúng ta hãy tận hưởng thời gian còn lại khi cậu vẫn còn ở đây nhé!"
 
         m "Ừ tất nhiên! Chúng ta còn nhiều thời gian!"
-
+        hide m emba
         "Sau cuộc trò chuyện đó, dù Aoi hơi buồn khi nhắc lại, hai chúng tôi thực sự trở nên gần gũi hơn."
 
         "Cuối cùng, điều không thể tránh khỏi đã đến. Kỳ thi kết thúc. Năm thứ hai kết thúc. Và tôi phải đi."
@@ -2740,17 +2889,19 @@ label start:
         scene airport
 
         "Ngày ra đi, cô ấy nhắn tin cho tôi:"
-
+        show m sad at left
         a "Hôm nay là ngày cậu đi phải không?"
 
         m "Ừ..."
 
         a "Thật tiếc là tôi không thể nói lời tạm biệt trực tiếp. Tôi đang ở Nhật. 😭😭"
-
+        hide m sad
+        show m happy at left
         m "Haha, không sao đâu. Nhưng tôi sẽ nhớ cậu. Tôi sẽ kể cho cậu về trường mới khi đến đó!"
 
         a "Ừ! Đừng quên nhắn tin nhé. Nếu quên thì tôi sẽ giết cậu!"
-
+        hide m happy
+        show m emba at left
         m "Tôi sẽ không bao giờ quên cậu đâu, đồ ngốc!"
 
         a "Cậu tốt nhất đấy! hmph 😤"
@@ -2771,7 +2922,9 @@ label start:
 
         play music onceupon volume 0.5
 
-        $ preferences.text_cps = 30
+        $ preferences.text_cps = 30 
+        hide m confuse
+        show m happy at left
         m "À, tôi đang định tìm cơ hội thực tập. Vì năm ba là lúc nên bắt đầu sớm."
 
         a "Ồ, tôi hiểu rồi."
@@ -2785,11 +2938,12 @@ label start:
         a "Tôi chưa chắc là muốn về hay ở lại..."
 
         m "Ừ... Thật khó để quyết định."
-
+        hide m happy
         "Kỳ thi kết thúc, và tôi rời đi mà Aoi không hề biết."
-
+        show m normal at left
         a "Cậu đâu rồi? Tôi chẳng thấy cậu đâu cả. Năm học mới sắp bắt đầu. 😢😢😢"
-
+        hide m normal
+        show m confuse at left
         m "Aoi… cậu sẽ không giận tôi về chuyện sắp nói chứ?"
 
         a "Hmm? Nói đi, tôi sẽ không giận đâu."
@@ -2799,15 +2953,17 @@ label start:
         m "Tôi không muốn làm cậu buồn."
 
         "Aoi dừng lại một chút trước khi trả lời."
-
+        hide m confuse
+        show m happy at left
         a "Ah haha… không sao đâu. Chúng ta vẫn có thể giữ liên lạc. Chỉ là không gặp trực tiếp thôi…"
-
+        hide m happy
+        show m emba at left
         m "Cậu thật sự không buồn sao?"
 
         a "Hơi buồn chút, nhưng cậu biết đấy… nếu điều đó làm cậu vui, tôi cũng vui theo!"
 
         m "Cảm ơn cậu!! Tôi chỉ sợ làm cậu buồn thôi. Tôi thật sự xin lỗi. 😭😭😭"
-
+        hide m emba
         "Nhưng thực tế, Aoi rất buồn vì tôi không thành thật với cô ấy."
 
         "Dù họ vẫn giữ liên lạc, sự gần gũi giữa họ không bao giờ phát triển hơn vì khoảng cách."
@@ -2869,6 +3025,8 @@ label start:
 
         scene sky
 
+        hide m normal
+
         $ preferences.text_cps = 30
 
         m_jp "レーン押せ、EZREAL !"
@@ -2906,6 +3064,8 @@ label start:
 
         na_jp_third "まあとにかく、全部かけるしかない、と自分に言い聞かせた。"
 
+        show m confuse at left
+
         m_jp "えっと…すみません。"
 
         na_jp "言葉を無理やり絞り出した。"
@@ -2920,7 +3080,8 @@ label start:
 
         na_jp_sec"くそ..."
         na_jp_third "もう少し踏み込もう。"
-
+        hide m confuse
+        show m emba at left
         m_jp "えっと、何回か見かけたことがあります。可愛いと思いました！だから…"
 
         na_jp "くそ…" 
@@ -2937,7 +3098,8 @@ label start:
         g_jp "本当？？私もアジア人！"
 
         m_jp "こんにちは、fine shyt"
-
+        hide m emba
+        show m confuse at left
         g_jp "…"
 
         m_jp "はは…"
@@ -2947,17 +3109,20 @@ label start:
         m_jp "ちなみに僕はベトナム出身です。"
 
         g_jp "私は日本人です。"
-
+        hide m confuse
+        show m happy at left
         m_jp "ええ！？信じられない！実は日本語を勉強しているんです。"
 
         g_jp "素敵！進み具合はどうですか？"
-
+        hide m happy
+        show m emba at left
         m_jp "正直まあまあだけど、練習する相手がいなくて。"
 
         m_jp "ねえ！手伝ってくれませんか？日本語の練習。"
 
         g_jp "うーん…今食事中だから…いいタイミングじゃないかも。"
-
+        hide m emba
+        show m happy at left
         m_jp "あ…邪魔したくない…ごめん。"
 
         m_jp "では…よろしくお願いします。"
@@ -2965,7 +3130,8 @@ label start:
         na_jp_third "席に戻ろうとしたが、彼女は言った："
 
         g_jp "待って ! ! 外国人が私の言語に興味を持つのは別に変じゃないよ。手伝うね。SNS使う?IG?Line?"
-
+        hide m happy
+        show m emba at left
         m_jp "ああ、Lineはあるけどほとんど使ってない。アメリカでは誰もLine使わないし。IGもあるから、IGで。"
 
         g_jp "オッケーオッケー。"
@@ -2985,7 +3151,8 @@ label start:
         m_jp "よし、これが僕のIG。"
 
         g_jp "オッケー。フォローリクエスト送った？"
-
+        hide m emba
+        show m happy at left
         m_jp "送った！ありがとう。すぐに充電するよ。"
 
         g_jp "はは、大丈夫。"
@@ -3008,7 +3175,7 @@ label start:
         jump after_cof_jp
 
     label bad_end_jp:
-
+        hide m happy
         stop music fadeout 1.0
 
         play music driftaway volume 0.6
@@ -3039,6 +3206,7 @@ label start:
         play music bleached volume 0.6
 
         scene campus
+        show m happy at left
         na_jp "あの会話以来、日々はより楽しく、生き生きとしたものになった。"
 
         na_jp_sec "同時に、以前のように気持ち悪いと思われるのを恐れず、彼女と気楽に会話できるようになった。"
@@ -3062,7 +3230,8 @@ label start:
         na_jp_sec "葵が突然聞いてきた："
 
         a_jp "ブランドン、来年は何をするつもり？"
-
+        hide m happy
+        show m confuse at left
         na_jp_third "その質問に驚いた。来年、転校するかもしれなかったから。"
 
         na_jp "雰囲気が少し気まずくなった。"
@@ -3092,7 +3261,8 @@ label start:
         a_jp "ん？話して。大丈夫だと思う。"
 
         na_jp_third "緊張したが、続けた。正直に話す方がいいと思った。"
-
+        hide m confuse
+        show m sad at left
         m_jp "残念だけど、来年ここにはいない。別の州の大学に転校する。"
 
         a_jp "えっ、なんで転校？この学校悪くないと思うけど。"
@@ -3102,7 +3272,8 @@ label start:
         m_jp "もちろん悪くない！でも…もっと良い奨学金をもらったから断れなかったんだ…"
 
         a_jp "残念…もし残っていたら、こうして会い続けられたのに…"
-
+        hide m sad
+        show m happy at left
         a_jp "でもヘイ！！！おめでとう！！！すごい！！！"
 
         m_jp "ありがとう！！"
@@ -3110,11 +3281,12 @@ label start:
         a_jp "…"
 
         m_jp "…"
-
+        hide m happy
+        show m emba at left
         a_jp "残りの時間を楽しもう、いい？"
 
         m_jp "もちろん！まだたくさん時間がある！"
-
+        hide m emba
         na_jp_sec "その会話の後、葵は少し悲しんだ時もあったが、二人は確実に親しくなった。"
 
         na_jp_third "そして避けられない出来事が起きた。期末試験が終わり、二年目が終わり、僕は去らなければならなかった。"
@@ -3122,17 +3294,19 @@ label start:
         scene airport
 
         na_jp "出発の日、彼女がメッセージを送ってきた："
-
+        show m sad at left
         a_jp "今日が出発の日だよね？"
 
         m_jp "うん…"
 
         a_jp "直接お別れできなくて残念。今日本にいる 😭😭"
-
+        hide m sad
+        show m happy at left
         m_jp "はは、大丈夫。でも寂しくなるよ。着いたら新しい学校のこと教える！"
 
         a_jp "うん！忘れずにメッセージしてね。忘れたら殺すよ！"
-
+        hide m happy
+        show m emba at left
         m_jp "絶対忘れないよ、バカ！"
 
         a_jp "忘れちゃダメだよ！ふん 😤"
@@ -3154,6 +3328,8 @@ label start:
         play music onceupon volume 0.5
 
         $ preferences.text_cps = 30
+        hide m confuse
+        show m happy at left
         m_jp "僕はインターンシップを探すつもり。三年生は早く始めるべきだから。"
 
         a_jp "ああ、なるほど。"
@@ -3167,11 +3343,12 @@ label start:
         a_jp "戻るか、ここに残るかまだ決めてない…"
 
         m_jp "うん…選ぶのは難しいね。"
-
+        hide m happy
         na_jp "期末試験が来て、僕は葵に知られることなく去った。"
-
+        show m normal at left
         a_jp "どこ？全然会わなかった。新学期が始まる 😢😢😢"
-
+        hide m normal
+        show m confuse at left
         m_jp "葵…僕が言おうとしていることで怒らないよね？"
 
         a_jp "ん？話して。怒らない。"
@@ -3181,15 +3358,17 @@ label start:
         m_jp "君を悲しませたくなかった。"
 
         na_jp_sec "葵は少し間を置いて答えた。"
-
+        hide m confuse
+        show m happy at left
         a_jp "あはは…大丈夫。連絡は続けられる。ただ、会えないけど…"
-
+        hide m happy
+        show m emba at left
         m_jp "本当に悲しくないの？"
 
         a_jp "少しはあるけど…でも君の人生だから、君が幸せなら私も幸せ！"
 
         m_jp "ありがとう！！悲しませるかと思って心配だった。本当にごめん 😭😭😭"
-
+        hide m emba
         na_jp_third"でも実際、葵は彼が正直でなかったことにとても悲しんでいた。"
 
         na_jp "連絡は続いたが、距離のせいで親密さはこれ以上深まらなかった。"
